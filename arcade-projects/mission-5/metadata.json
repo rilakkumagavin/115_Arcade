@@ -1,0 +1,67 @@
+{
+  "projectName": "M05_能量晶片與分數",
+  "lessonId": 5,
+  "sourcePath": "arcade-projects/mission-5/main.ts",
+  "crystalKind": "namespace SpriteKind { export const Crystal = SpriteKind.create() }",
+  "crystals": [
+    {"name": "crystal1", "column": 4, "row": 6, "purpose": "起點附近"},
+    {"name": "crystal2", "column": 6, "row": 6, "purpose": "地面中段"},
+    {"name": "crystal3", "column": 5, "row": 5, "purpose": "需要跳躍"},
+    {"name": "crystal4", "column": 8, "row": 4, "purpose": "平台區"},
+    {"name": "crystal5", "column": 9, "row": 4, "purpose": "平台區右側"}
+  ],
+  "exportedProject": {
+    "status": "missing",
+    "fileName": "arcade-M05_能量晶片與分數.hex",
+    "sourceDownloadPath": "C:/Users/user/Downloads/arcade-M05_能量晶片與分數.hex",
+    "copiedPath": "C:/Users/user/Documents/Codex/115_Arcade/downloads/projects/mission-5-complete/arcade-M05_能量晶片與分數.hex",
+    "extension": ".hex",
+    "fileSize": 0,
+    "zeroByte": false,
+    "notes": "MakeCode 已選擇 N3 執行編譯，但 in-app Browser 未將檔案寫入 Windows Downloads。"
+  },
+  "tests": {
+    "createdInBrowser": true,
+    "blocksModeTested": true,
+    "simulatorTested": true,
+    "manualControlTested": true,
+    "threeCrystalsCollected": true,
+    "allCrystalsCollected": false,
+    "restartTested": true,
+    "importTested": false,
+    "hardwareTested": false,
+    "approved": false
+  },
+  "contentCheck": {
+    "hasPlayer": true,
+    "hasMovement": true,
+    "hasTilemap": true,
+    "hasGravity": true,
+    "hasGroundedJump": true,
+    "hasCrystalKind": true,
+    "crystalCount": 5,
+    "hasScore": true,
+    "hasOverlap": true,
+    "hasDestroyCrystal": true,
+    "hasCollectSound": true,
+    "hasEnemies": false,
+    "hasLife": false,
+    "hasGoal": false,
+    "hasBoss": false,
+    "hasShooting": false
+  },
+  "screenshots": [
+    {"path": "assets/screenshots/mission-5-game-preview.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-create-kind.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-create-crystal.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-place-crystals.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-set-score.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-overlap-event.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-add-score.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-destroy-crystal.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-collect-sound.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-collect-complete.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-main-blocks.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-5-score-test.png", "status": "captured"}
+  ]
+}

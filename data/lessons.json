@@ -693,23 +693,26 @@
   },
   {
     "id": 5,
-    "title": "任務5：加入能量晶片與得分",
+    "title": "任務5：能量晶片與分數",
     "icon": "chip",
     "phase": "下午",
     "duration": "30分鐘",
-    "story": "玩家需要收集散落在校園關卡中的能量晶片，恢復傳送門的能源。",
+    "story": "校園的能源傳送系統失去動力，能量晶片散落在關卡中。勇者必須跳過平台，收集所有晶片，讓能源系統重新啟動。",
     "goals": [
       "建立 Crystal 自訂 SpriteKind",
-      "放置固定位置晶片",
-      "碰到晶片後加分並銷毀晶片"
+      "建立原創能量晶片角色",
+      "放置5枚固定位置晶片",
+      "使用 Player 與 Crystal 重疊事件",
+      "取得晶片時加分、播放音效並銷毀晶片",
+      "重新開始後重設分數、晶片與玩家位置"
     ],
-    "result": "玩家碰到晶片後分數加 1，晶片會消失。",
+    "result": "地圖中會出現5枚能量晶片。玩家碰到晶片時分數加1、播放短音效，晶片立即消失；重新開始後分數回到0，晶片全部恢復。",
     "concepts": [
-      "SpriteKind",
-      "Sprite 重疊事件",
-      "分數",
-      "銷毀角色",
-      "音效"
+      "SpriteKind：替遊戲角色分類",
+      "重疊事件：偵測 Player 碰到 Crystal",
+      "分數：每枚晶片增加1分",
+      "銷毀角色：取得後讓晶片消失",
+      "音效：提供立即的成功回饋"
     ],
     "categories": [
       "角色",
@@ -717,81 +720,252 @@
       "音效"
     ],
     "steps": [
-      "建立晶片圖案",
-      "將晶片設定為 Crystal 類別",
-      "放置晶片",
-      "建立重疊事件",
-      "分數加 1",
-      "銷毀晶片",
-      "加入取得音效",
-      "測試所有晶片"
+      "建立 Crystal 角色種類，讓遊戲知道這些物件是能量晶片。",
+      "繪製原創晶片圖案，建立第一枚晶片並把角色種類設為 Crystal。",
+      "設定第一枚晶片位置，確認不在牆壁或玩家起點中。",
+      "複製並放置其餘晶片，共5枚且位置不同。",
+      "在遊戲開始時將分數設定為0。",
+      "建立 Player 與 Crystal 的重疊事件。",
+      "在重疊事件中讓分數增加1。",
+      "播放簡短的 ba ding 取得音效。",
+      "銷毀事件中的 otherSprite，也就是被碰到的 Crystal。",
+      "測試地面與跳躍晶片，確認每枚只加1分。",
+      "重新啟動遊戲，確認分數、晶片與玩家位置全部重設。"
     ],
     "test": [
-      "晶片可以看見",
-      "碰到晶片後分數增加",
-      "晶片取得後消失",
-      "原有終點仍可正常運作"
+      "遊戲開始時分數為0，畫面中顯示5枚晶片。",
+      "玩家左右移動、重力、跳躍與防止空中連跳仍正常。",
+      "已人工取得兩枚地面晶片與一枚跳躍晶片。",
+      "每次取得後分數只增加1，晶片立即消失。",
+      "取得音效程式已在重疊事件中執行。",
+      "重新開始後分數歸零、5枚晶片重新出現、玩家回到起點。",
+      "兩枚平台區晶片仍需更精準的助跑跳躍操作複驗。",
+      "專案可切回積木模式，MakeCode 顯示問題0。"
     ],
     "checklist": [
-      "晶片可以看見",
-      "分數會增加",
-      "晶片會消失",
-      "玩家仍可移動與跳躍"
+      "我有建立 Crystal 角色種類。",
+      "我有建立能量晶片。",
+      "晶片的角色種類是 Crystal。",
+      "我有放置5枚晶片。",
+      "遊戲開始時分數是0。",
+      "玩家碰到晶片時分數會加1。",
+      "晶片取得後會消失。",
+      "同一枚晶片不會重複計分。",
+      "取得晶片時會播放音效。",
+      "玩家仍能正常移動與跳躍。",
+      "重新開始後分數會歸零。",
+      "重新開始後晶片會重新出現。",
+      "我已完成模擬器基本測試。",
+      "我已儲存專案。"
     ],
     "commonErrors": [
-      "晶片沒有出現",
-      "晶片類別設成 Player",
-      "分數沒有增加",
-      "晶片沒有被銷毀"
+      "晶片沒有出現：檢查是否建立晶片，以及位置是否在畫面或地圖內。",
+      "晶片變成玩家：晶片種類誤設為 Player，請改成 Crystal。",
+      "玩家碰到晶片沒有反應：檢查重疊事件是否為 Player 與 Crystal。",
+      "分數沒有增加：確認分數加1積木位於重疊事件內。",
+      "分數一次增加很多：晶片沒有立即銷毀，重疊事件持續觸發。",
+      "晶片沒有消失：確認銷毀積木位於重疊事件內。",
+      "玩家碰到晶片後消失：銷毀目標錯誤，應改成 otherSprite。",
+      "音效沒有播放：確認音效積木位於重疊事件內，並檢查音量。",
+      "晶片放在牆壁裡：調整位置，不要與地面圖塊重疊。",
+      "晶片太高拿不到：降低位置或調整平台。",
+      "重新開始後分數沒有歸零：確認啟動時有設定分數為0。",
+      "重新開始後晶片沒有出現：確認晶片在遊戲啟動流程中建立。",
+      "重複出現兩組晶片：檢查建立晶片程式是否重複執行。",
+      "原本跳躍功能失效：檢查 A 鍵跳躍事件是否被刪除或覆蓋。"
     ],
     "rescue": [
-      "檢查 Crystal 類別",
-      "檢查重疊事件角色順序",
-      "確認銷毀的是 otherSprite"
+      "先確認 Crystal 種類與 Player、Crystal 重疊事件。",
+      "確認事件順序為加分、音效、銷毀 otherSprite。",
+      "若晶片無法取得，先把它移到起點附近測試。",
+      "卡關超過5分鐘時，使用任務5 TypeScript 重建積木。"
     ],
-    "starterProject": "arcade-projects/05-crystals-start.png",
-    "completeProject": "arcade-projects/05-crystals-complete.png",
-    "hardwareReminder": "已通過實體 Arcade 遊戲機操作測試。",
+    "starterProject": "missing",
+    "completeProject": "missing",
+    "hardwareReminder": "M05 尚未傳入實體 Arcade 遊戲機，hardwareTested 保持 false。",
     "phaseStatus": {
-      "summary": "已通過實體 Arcade 遊戲機操作測試。",
+      "summary": "已建立獨立 M05 並完成積木與模擬器基本測試；專案檔、平台晶片與實體硬體仍待完成。",
       "hardwareTarget": "N3",
-      "hardwareBootTested": true,
-      "hardwareTested": true,
+      "generated": true,
+      "importTested": false,
+      "blocksTested": true,
+      "simulatorTested": true,
+      "hardwareBootTested": false,
+      "hardwareTested": false,
       "approved": false,
       "passed": [
-        "UF2 成功產生或下載",
-        "UF2 成功傳入遊戲機",
-        "遊戲機成功重新啟動",
-        "畫面可正常顯示",
-        "左右移動",
-        "A 鍵跳躍",
-        "晶片取得",
-        "分數顯示",
-        "取得音效",
-        "重新開始"
+        "獨立 M05 專案已建立",
+        "Crystal 自訂 SpriteKind 已建立",
+        "五枚固定晶片顯示",
+        "遊戲開始分數為0",
+        "左右移動與跳躍正常",
+        "兩枚地面晶片與一枚跳躍晶片可取得",
+        "每枚晶片只增加1分",
+        "取得後晶片立即消失",
+        "重疊事件包含短音效",
+        "重新開始後分數歸零",
+        "重新開始後五枚晶片恢復",
+        "重新開始後玩家回到起點",
+        "MakeCode 積木模式問題數為0"
       ],
       "pending": [
-        "終點過關",
-        "防止空中無限跳躍",
-        "晶片取得後消失逐項紀錄",
-        "分數重新歸零",
-        "晶片重新出現",
-        "玩家回到正確位置",
-        "長時間操作是否穩定"
-      ],
-      "images": [
-        "assets/screenshots/phase3-hardware-download-options.png",
-        "assets/screenshots/phase3-hardware-n3-selection.png"
+        "兩枚平台區晶片的精準操作複驗",
+        "所有五枚晶片完整取得測試",
+        "真實 M05 .hex 寫入 Windows Downloads",
+        "專案重新匯入驗證",
+        "實體 N3 遊戲機完整操作測試",
+        "長時間操作穩定性"
       ]
     },
     "downloadMode": "project",
+    "downloadNote": "M05 已在 MakeCode Arcade 選擇 N3 編譯，但 in-app Browser 未將 .hex 寫入 Windows Downloads，因此專案檔下載保持停用。",
     "mediaAssets": [
       {
-        "title": "Phase 3 遊戲畫面",
+        "title": "任務5完成畫面",
         "type": "game-preview",
-        "path": "assets/screenshots/phase-3-game-preview.png",
-        "alt": "Phase 3 能量晶片與得分系統的遊戲畫面",
-        "status": "generated"
+        "path": "assets/screenshots/mission-5-game-preview.png",
+        "alt": "地圖中出現能量晶片，玩家可以移動與跳躍收集。",
+        "status": "captured"
+      },
+      {
+        "title": "建立 Crystal 種類",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-5-create-kind.png",
+        "alt": "建立 Crystal 角色種類，將能量晶片和玩家區分開來。",
+        "status": "captured"
+      },
+      {
+        "title": "建立晶片",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-5-create-crystal.png",
+        "alt": "建立能量晶片，並將角色種類設定為 Crystal。",
+        "status": "captured"
+      },
+      {
+        "title": "放置晶片",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-5-place-crystals.png",
+        "alt": "將能量晶片放在關卡中的不同位置。",
+        "status": "captured"
+      },
+      {
+        "title": "分數歸零",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-5-set-score.png",
+        "alt": "遊戲開始時，先將分數設定為0。",
+        "status": "captured"
+      },
+      {
+        "title": "重疊事件",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-5-overlap-event.png",
+        "alt": "當玩家碰到能量晶片時，啟動收集程式。",
+        "status": "captured"
+      },
+      {
+        "title": "分數加1",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-5-add-score.png",
+        "alt": "每收集一枚能量晶片，分數增加1分。",
+        "status": "captured"
+      },
+      {
+        "title": "銷毀晶片",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-5-destroy-crystal.png",
+        "alt": "晶片被取得後立即消失，避免重複計分。",
+        "status": "captured"
+      },
+      {
+        "title": "取得音效",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-5-collect-sound.png",
+        "alt": "收集成功時播放短音效，讓玩家知道已經取得晶片。",
+        "status": "captured"
+      },
+      {
+        "title": "完整收集事件",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-5-collect-complete.png",
+        "alt": "玩家碰到晶片時，分數增加、播放音效，晶片也會消失。",
+        "status": "captured"
+      },
+      {
+        "title": "任務5完整積木",
+        "type": "main-blocks",
+        "path": "assets/screenshots/mission-5-main-blocks.png",
+        "alt": "任務5完成後的完整積木。",
+        "status": "captured"
+      },
+      {
+        "title": "分數測試畫面",
+        "type": "game-preview",
+        "path": "assets/screenshots/mission-5-score-test.png",
+        "alt": "取得晶片後，分數增加，已收集的晶片會消失。",
+        "status": "captured"
+      }
+    ],
+    "customSections": [
+      {
+        "title": "認識 SpriteKind",
+        "body": "SpriteKind 像是替遊戲角色分類。玩家屬於 Player，能量晶片屬於 Crystal。不同種類可以設定不同的碰撞規則。不同物件要使用不同的角色種類，遊戲才知道玩家碰到的是晶片，不是其他角色。",
+        "steps": [
+          "建立新的 Crystal 角色種類。",
+          "建立晶片時把種類選成 Crystal。",
+          "確認玩家仍是 Player。"
+        ]
+      },
+      {
+        "title": "建立與放置能量晶片",
+        "body": "晶片使用原創菱形發光核心造型，和玩家及背景有明顯對比。五枚晶片都使用固定位置，方便測試。",
+        "steps": [
+          "第一枚放在第4欄、第6列，起點附近。",
+          "第二枚放在第6欄、第6列，地面中段。",
+          "第三枚放在第5欄、第5列，需要跳躍。",
+          "第四、五枚放在第8與第9欄、第4列，位於平台區。"
+        ]
+      },
+      {
+        "title": "建立收集事件",
+        "body": "玩家碰到晶片時，遊戲要同時完成三件事：加分、播放音效、讓晶片消失。",
+        "steps": [
+          "建立 Player 與 Crystal 重疊事件。",
+          "分數增加1。",
+          "播放短音效。",
+          "銷毀 otherSprite，也就是被碰到的晶片。"
+        ]
+      },
+      {
+        "title": "晶片設計實驗室",
+        "body": "選擇修改一項：晶片造型、取得音效、其中一枚位置，或增加一枚晶片但總數不超過6枚。修改後要重新測試。",
+        "steps": [
+          "確認晶片仍可取得。",
+          "確認分數正確。",
+          "確認晶片會消失。",
+          "確認沒有晶片卡在牆壁中。"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "為什麼晶片不能使用 Player 種類？",
+        "answer": "玩家與晶片需要不同種類，才能設定正確的碰撞事件。"
+      },
+      {
+        "question": "為什麼晶片取得後要銷毀？",
+        "answer": "避免同一枚晶片持續重複加分。"
+      },
+      {
+        "question": "哪一個事件負責偵測玩家取得晶片？",
+        "answer": "Player 與 Crystal 的重疊事件。"
+      },
+      {
+        "question": "分數加1應該放在哪裡？",
+        "answer": "放在玩家與晶片重疊事件中。"
+      },
+      {
+        "question": "為什麼先使用固定位置，不使用隨機位置？",
+        "answer": "固定位置比較容易測試，也能確保每一枚晶片都取得得到。"
       }
     ]
   }

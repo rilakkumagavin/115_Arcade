@@ -70,5 +70,23 @@
     "status": "missing",
     "available": false,
     "productionMethod": "MakeCode 已完成 N3 編譯；等待人工將 Download Again 取得的檔案放入 Windows Downloads 後接入。"
+  },
+  {
+    "fileName": "mission-5/main.ts",
+    "path": "arcade-projects/mission-5/main.ts",
+    "type": "TypeScript",
+    "purpose": "任務5 MakeCode Arcade 原始碼，加入 Crystal、五枚晶片、分數、音效與銷毀。",
+    "status": "simulator-tested",
+    "available": true,
+    "productionMethod": "已在獨立 M05 專案轉回積木並完成基本模擬器測試。"
+  },
+  {
+    "fileName": "arcade-M05_能量晶片與分數.hex",
+    "path": "",
+    "type": "MakeCode HEX",
+    "purpose": "任務5完成版 MakeCode Arcade 匯出檔。",
+    "status": "missing",
+    "available": false,
+    "productionMethod": "MakeCode 已選擇 N3 編譯；等待檔案實際寫入 Windows Downloads 後接入。"
   }
 ]
