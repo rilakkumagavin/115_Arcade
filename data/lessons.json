@@ -1,0 +1,615 @@
+[
+  {
+    "id": 0,
+    "title": "任務0：認識遊戲機與完成版試玩",
+    "icon": "gamepad",
+    "phase": "上午",
+    "duration": "20分鐘",
+    "story": "先認識 Arcade 遊戲機與 MakeCode 介面，觀察老師展示的《晶片勇者：校園冒險》。",
+    "goals": [
+      "認識 Arcade 遊戲機按鍵",
+      "知道完成版遊戲的操作方式",
+      "理解今天會逐步完成一個平台遊戲"
+    ],
+    "result": "學生可以看懂遊戲目標，並知道本任務不需要下載專案。",
+    "concepts": [
+      "模擬器",
+      "方向鍵",
+      "A/B 按鍵"
+    ],
+    "categories": [
+      "controller",
+      "game"
+    ],
+    "steps": [
+      "觀察老師展示完成版",
+      "試玩實體遊戲機",
+      "說出角色、地圖、晶片與終點的功能"
+    ],
+    "test": [
+      "能使用方向鍵移動",
+      "能按 A 鍵跳躍",
+      "能描述今天的遊戲任務"
+    ],
+    "checklist": [
+      "我知道遊戲機方向鍵在哪裡",
+      "我知道 A 鍵是常用動作鍵",
+      "我知道今天會分段完成遊戲"
+    ],
+    "commonErrors": [
+      "誤以為一開始就要自由創作",
+      "不知道模擬器和實體遊戲機都要測試"
+    ],
+    "rescue": [
+      "先看老師示範，再跟著任務1開始製作"
+    ],
+    "starterProject": "none",
+    "completeProject": "none",
+    "hardwareReminder": "本任務以觀察與試玩為主，不要求學生下載專案。",
+    "downloadMode": "none",
+    "downloadNote": "本任務不需下載專案，請先觀察並試玩老師的完成版遊戲。",
+    "mediaAssets": [
+      {
+        "title": "Phase 3 實機畫面",
+        "type": "game-preview",
+        "path": "assets/screenshots/phase-3-game-preview.png",
+        "alt": "晶片勇者在 MakeCode Arcade 模擬器中的實際遊戲畫面",
+        "status": "generated"
+      }
+    ]
+  },
+  {
+    "id": 1,
+    "title": "任務1：建立玩家角色",
+    "icon": "hero",
+    "phase": "上午",
+    "duration": "25分鐘",
+    "story": "晶片勇者準備進入校園關卡。第一步是建立一位原創玩家角色，讓他出現在遊戲畫面中。",
+    "goals": [
+      "建立一個 Sprite",
+      "將角色類別設定為 Player",
+      "設定玩家初始位置"
+    ],
+    "result": "遊戲開始後，玩家角色會出現在畫面左側偏下方。",
+    "concepts": [
+      "Sprite",
+      "SpriteKind.Player",
+      "set position"
+    ],
+    "categories": [
+      "角色",
+      "場景"
+    ],
+    "steps": [
+      "建立一個玩家 Sprite",
+      "在建立角色積木中將類別設為 Player",
+      "設定玩家起始位置 x=40、y=88",
+      "啟動模擬器確認角色出現"
+    ],
+    "test": [
+      "按下模擬器重新啟動",
+      "確認畫面中只有玩家角色",
+      "確認沒有控制器、重力、晶片或怪物"
+    ],
+    "checklist": [
+      "畫面中可以看到玩家角色",
+      "玩家類別是 Player",
+      "玩家位置在畫面內",
+      "本任務沒有加入移動或跳躍"
+    ],
+    "commonErrors": [
+      "角色類別沒有設成 Player",
+      "玩家位置設到畫面外",
+      "不小心加入控制器移動積木"
+    ],
+    "rescue": [
+      "重新檢查建立角色積木右側的類別欄位",
+      "把位置改回 x=40、y=88",
+      "刪除尚未教到的控制器積木"
+    ],
+    "starterProject": "missing",
+    "completeProject": "generated",
+    "hardwareReminder": "本任務只確認角色出現在模擬器；尚不需要傳入實體遊戲機。",
+    "downloadMode": "project",
+    "mediaAssets": [
+      {
+        "title": "任務1完成畫面",
+        "type": "game-preview",
+        "path": "assets/screenshots/mission-1-game-preview.png",
+        "alt": "完成後，玩家角色會出現在遊戲畫面中。",
+        "status": "generated"
+      },
+      {
+        "title": "建立玩家角色",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-1-create-sprite.png",
+        "alt": "建立玩家角色，並將角色種類設定為 Player。",
+        "status": "generated"
+      },
+      {
+        "title": "設定起始位置",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-1-set-position.png",
+        "alt": "設定玩家角色在畫面中的起始位置。",
+        "status": "generated"
+      },
+      {
+        "title": "任務1完整積木",
+        "type": "main-blocks",
+        "path": "assets/screenshots/mission-1-main-blocks.png",
+        "alt": "任務1完成後的完整積木。",
+        "status": "generated"
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "title": "任務2：控制玩家左右移動",
+    "icon": "arrows",
+    "phase": "上午",
+    "duration": "25分鐘",
+    "story": "晶片勇者學會左右走動，準備在校園關卡裡探索。",
+    "goals": [
+      "使用控制器移動玩家",
+      "設定 X 方向速度",
+      "讓玩家留在畫面中"
+    ],
+    "result": "按左右方向鍵時，玩家會在畫面中左右移動，並且不會跑出邊界。",
+    "concepts": [
+      "controller.moveSprite",
+      "vx",
+      "vy",
+      "set stay in screen"
+    ],
+    "categories": [
+      "控制器",
+      "角色"
+    ],
+    "steps": [
+      "建立玩家角色與起始位置",
+      "加入控制器移動角色積木",
+      "將 vx 設為 90、vy 設為 0",
+      "加入 stay in screen 積木",
+      "測試左鍵、右鍵與放開停止"
+    ],
+    "test": [
+      "按左方向鍵，玩家往左移動",
+      "按右方向鍵，玩家往右移動",
+      "放開按鍵後玩家停止",
+      "玩家碰到邊緣時不會消失"
+    ],
+    "checklist": [
+      "玩家可以左右移動",
+      "vy 保持 0，玩家不會上下飄",
+      "玩家不會跑出畫面",
+      "本任務沒有加入重力、跳躍或 Tilemap"
+    ],
+    "commonErrors": [
+      "控制器移動的對象不是 player",
+      "vy 不小心設成 90",
+      "忘記加入 stay in screen",
+      "把本任務做在任務1專案上"
+    ],
+    "rescue": [
+      "確認控制器積木中的角色是 player",
+      "把 vy 改回 0",
+      "重新加入 stay in screen，並確認值為開"
+    ],
+    "starterProject": "missing",
+    "completeProject": "generated",
+    "hardwareReminder": "本任務可先用模擬器測試；實體遊戲機下載會在後續任務安排。",
+    "downloadMode": "project",
+    "mediaAssets": [
+      {
+        "title": "任務2完成畫面",
+        "type": "game-preview",
+        "path": "assets/screenshots/mission-2-game-preview.png",
+        "alt": "按左右方向鍵，玩家角色可以在畫面中移動。",
+        "status": "generated"
+      },
+      {
+        "title": "控制器移動",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-2-controller-move.png",
+        "alt": "使用控制器移動玩家，X速度控制左右移動，Y速度保持0。",
+        "status": "generated"
+      },
+      {
+        "title": "留在畫面中",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-2-stay-in-screen.png",
+        "alt": "讓玩家角色留在遊戲畫面中，不會跑出邊界。",
+        "status": "generated"
+      },
+      {
+        "title": "任務2完整積木",
+        "type": "main-blocks",
+        "path": "assets/screenshots/mission-2-main-blocks.png",
+        "alt": "任務2完成後的完整積木。",
+        "status": "generated"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "任務3：建立 Tilemap 與地面",
+    "icon": "map",
+    "phase": "上午",
+    "duration": "35分鐘",
+    "story": "晶片勇者來到校園資料通道。這一關先鋪出可以冒險的地面與平台，下一關才會加入重力與跳躍。",
+    "goals": [
+      "建立一張簡單 Tilemap",
+      "畫出一整排地面",
+      "加入一個短平台",
+      "將地面與平台設定為牆壁",
+      "保留任務2的左右移動功能"
+    ],
+    "result": "遊戲畫面會出現玩家角色、地面與一個平台。玩家可以左右移動，但本任務尚未加入重力，所以角色不需要真的掉落或跳躍。",
+    "concepts": [
+      "Tilemap",
+      "Tile",
+      "Wall",
+      "place on tile",
+      "set stay in screen"
+    ],
+    "categories": [
+      "場景",
+      "角色",
+      "控制器"
+    ],
+  "steps": [
+    "找到「場景」分類。",
+    "加入設定 Tilemap 的積木。",
+    "畫出底部一整排地面，並在中間加入一個短平台。",
+    "在 Tilemap 編輯器中把地面與平台圖塊設定為牆壁。",
+    "建立玩家角色並保留左右移動。",
+    "將玩家放到左側地面上方。",
+    "啟動模擬器，確認玩家、地面與平台正常顯示。",
+    "進階補充：需要動態機關時，才用座標逐格開啟牆壁。"
+    ],
+    "test": [
+      "遊戲啟動後玩家正常出現。",
+      "地面正常顯示。",
+      "平台正常顯示。",
+      "玩家可左右移動。",
+      "玩家不會跑出畫面。",
+      "玩家起始位置不在牆壁裡。",
+      "玩家不會出現在地圖外。",
+      "專案可切回積木模式。"
+    ],
+    "checklist": [
+      "我有建立 Tilemap。",
+    "我有畫出一整排地面。",
+    "我有加入一個平台。",
+    "我知道圖塊外觀和牆壁屬性不同。",
+    "我有開啟 Tilemap 編輯器。",
+    "我有選擇地面圖塊。",
+    "地面圖塊已設定為牆壁。",
+    "平台圖塊已設定為牆壁。",
+    "我知道牆壁也可以是地板。",
+    "我知道逐格設定牆壁是進階方法。",
+    "玩家出現在正確位置。",
+      "玩家可以左右移動。",
+      "玩家不會跑出畫面。",
+      "我已啟動模擬器測試。",
+      "我已儲存專案。"
+    ],
+    "commonErrors": [
+    "地圖沒有出現：檢查是否加入設定 Tilemap 的積木。",
+    "玩家出現在牆壁裡：調整玩家起始位置。",
+    "地面看得到但不是牆壁：檢查地面圖塊是否設定為牆壁。",
+    "平台沒有設定為牆壁：重新設定平台圖塊的牆壁屬性。",
+    "只畫地面，沒有設定牆壁：地面看得到，但加入重力後玩家會穿過。",
+    "只設定部分地面為牆壁：玩家可能從沒有標記的地方掉下去。",
+    "忘記把平台設定為牆壁：玩家無法站在平台上。",
+    "選錯圖塊：背景圖塊被設成牆壁，玩家會被看不見的牆擋住。",
+    "每一格都放牆壁積木：可以改用 Tilemap 編輯器一次設定，讓程式更簡潔。",
+    "玩家出現在地圖外：確認座標或地圖位置設定。",
+    "不小心刪掉左右移動：重新加入控制器移動玩家積木。",
+      "地圖畫得太複雜：先保留一排地面與一個平台即可。"
+    ],
+    "rescue": [
+      "若地圖一直失敗，先回到任務2完成版，再重新加入 Tilemap。",
+      "若玩家不見了，先確認玩家是否放在第 2 欄、第 6 列附近。",
+      "若牆壁設定太多看不懂，先確認底部地面與中間平台兩種位置即可。"
+    ],
+    "starterProject": "missing",
+    "completeProject": "generated",
+    "hardwareReminder": "本任務先測試模擬器。實體遊戲機測試可在任務4加入重力與跳躍後再安排。",
+    "downloadMode": "project",
+    "downloadNote": "M03 MakeCode 匯出檔已接入下載中心；尚未執行重新匯入驗證。",
+    "mediaAssets": [
+      {
+        "title": "任務3完成畫面",
+        "type": "game-preview",
+        "path": "assets/screenshots/mission-3-game-preview.png",
+        "alt": "完成後，遊戲畫面會出現地面、平台與玩家角色。",
+        "status": "captured"
+      },
+      {
+        "title": "建立 Tilemap",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-3-create-tilemap.png",
+        "alt": "加入 Tilemap，建立遊戲關卡的地圖。",
+        "status": "captured"
+      },
+    {
+      "title": "編輯 Tilemap",
+      "type": "step-blocks",
+      "path": "assets/screenshots/mission-3-wall-marked-map.png",
+      "alt": "在 Tilemap 編輯器中畫出地面與平台。",
+      "status": "captured"
+    },
+    {
+        "title": "設定玩家位置",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-3-place-player.png",
+        "alt": "設定玩家角色在地圖中的起始位置。",
+        "status": "captured"
+      },
+      {
+        "title": "任務3完整積木",
+        "type": "main-blocks",
+        "path": "assets/screenshots/mission-3-main-blocks.png",
+      "alt": "任務3完成後的完整積木。",
+      "status": "captured"
+    }
+  ],
+  "customSections": [
+    {
+      "title": "在 Tilemap 編輯器中設定牆壁",
+      "body": "地面畫好後，現在看起來像地板，但玩家還可能直接穿過去。我們要告訴遊戲：這些圖塊不是只有圖片，它們還是可以擋住角色的牆壁。在 MakeCode Arcade 裡，牆壁不一定是直立的牆，也可以是地板、平台或障礙物。",
+      "steps": [
+        "點開 Tilemap 積木中的地圖縮圖，進入 Tilemap 編輯器。",
+        "在左側圖塊清單中，選擇已經用來畫地面的圖塊。",
+        "開啟牆壁設定工具。",
+        "將地面與平台圖塊標示為牆壁。",
+        "確認牆壁標記已套用到地面與平台。",
+        "回到積木畫面，啟動模擬器。",
+        "下一關加入重力後，玩家就能站在這些圖塊上。"
+      ],
+      "mediaAssets": [
+        {
+          "title": "開啟 Tilemap 編輯器",
+          "type": "step-blocks",
+          "path": "assets/screenshots/mission-3-open-tilemap-editor.png",
+          "alt": "點擊 Tilemap 縮圖，開啟地圖編輯器。",
+          "status": "captured"
+        },
+        {
+          "title": "選擇地面圖塊",
+          "type": "step-blocks",
+          "path": "assets/screenshots/mission-3-select-ground-tile.png",
+          "alt": "選擇要當作地面的圖塊。",
+          "status": "captured"
+        },
+        {
+          "title": "開啟牆壁工具",
+          "type": "step-blocks",
+          "path": "assets/screenshots/mission-3-enable-wall-tool.png",
+          "alt": "開啟牆壁工具，將地面設定成可以阻擋角色的牆壁。",
+          "status": "captured"
+        },
+        {
+          "title": "牆壁設定完成",
+          "type": "step-blocks",
+          "path": "assets/screenshots/mission-3-wall-marked-map.png",
+          "alt": "地面與平台都標示為牆壁後，角色就不能穿過。",
+          "status": "captured"
+        },
+        {
+          "title": "圖案與牆壁比較",
+          "type": "step-blocks",
+          "path": "assets/screenshots/mission-3-wall-setting-comparison.png",
+          "alt": "看起來一樣的地面，只有設定為牆壁後才會產生碰撞。",
+          "status": "captured"
+        }
+      ]
+    }
+  ],
+  "comparison": {
+    "title": "兩種設定牆壁的方法",
+    "items": [
+      {
+        "title": "方法一：在 Tilemap 編輯器中設定",
+        "advantages": [
+          "操作較直覺",
+          "不需要很多重複積木",
+          "地圖修改時比較方便",
+          "適合初學者"
+        ],
+        "tag": "本營隊共同必做使用"
+      },
+      {
+        "title": "方法二：使用「牆壁設為開」積木逐格設定",
+        "advantages": [
+          "可以在遊戲執行時動態改變牆壁",
+          "適合機關、開門或特殊關卡"
+        ],
+        "disadvantages": [
+          "地面很多時需要大量重複積木",
+          "初學者容易看不懂座標"
+        ],
+        "tag": "進階補充"
+      }
+    ]
+  },
+  "questions": [
+    {
+      "question": "地面看起來像地板，就一定能站在上面嗎？",
+      "answer": "不一定，還要設定成牆壁。"
+    },
+    {
+      "question": "牆壁只能是直立的牆嗎？",
+      "answer": "不是，地板、平台和障礙物也可以設定為牆壁。"
+    },
+    {
+      "question": "地面有10格時，一定要放10個牆壁積木嗎？",
+      "answer": "不用，可以直接在 Tilemap 編輯器中設定。"
+    }
+  ],
+  "advancedSections": [
+    {
+      "title": "進階補充：用座標逐格開啟牆壁",
+      "body": "這種方法可以在遊戲執行中改變特定位置的牆壁，適合製作開門、機關或消失平台。但一般地面不需要這樣逐格設定，直接在 Tilemap 編輯器中設定會比較簡單。",
+      "mediaAssets": [
+        {
+          "title": "逐格開啟牆壁",
+          "type": "step-blocks",
+          "path": "assets/screenshots/mission-3-set-wall.png",
+          "alt": "使用座標逐格開啟牆壁，適合進階機關，不是本任務共同必做流程。",
+          "status": "captured"
+        }
+      ]
+    }
+  ]
+},
+  {
+    "id": 4,
+    "title": "任務4：加入重力與跳躍",
+    "icon": "jump",
+    "phase": "上午",
+    "duration": "30分鐘",
+    "story": "後續才加入平台遊戲的重力與跳躍。",
+    "goals": [
+      "設定重力",
+      "設定 A 鍵跳躍",
+      "避免空中連跳"
+    ],
+    "result": "玩家可以站在地面上跳躍。",
+    "concepts": [
+      "ay",
+      "vy",
+      "is hitting tile"
+    ],
+    "categories": [
+      "控制器",
+      "角色",
+      "場景"
+    ],
+    "steps": [
+      "後續任務處理"
+    ],
+    "test": [
+      "後續任務處理"
+    ],
+    "checklist": [
+      "後續任務處理"
+    ],
+    "commonErrors": [
+      "後續任務處理"
+    ],
+    "rescue": [
+      "後續任務處理"
+    ],
+    "starterProject": "planned",
+    "completeProject": "planned",
+    "hardwareReminder": "後續任務再測試。",
+    "downloadMode": "project",
+    "mediaAssets": []
+  },
+  {
+    "id": 5,
+    "title": "任務5：加入能量晶片與得分",
+    "icon": "chip",
+    "phase": "下午",
+    "duration": "30分鐘",
+    "story": "玩家需要收集散落在校園關卡中的能量晶片，恢復傳送門的能源。",
+    "goals": [
+      "建立 Crystal 自訂 SpriteKind",
+      "放置固定位置晶片",
+      "碰到晶片後加分並銷毀晶片"
+    ],
+    "result": "玩家碰到晶片後分數加 1，晶片會消失。",
+    "concepts": [
+      "SpriteKind",
+      "Sprite 重疊事件",
+      "分數",
+      "銷毀角色",
+      "音效"
+    ],
+    "categories": [
+      "角色",
+      "資訊",
+      "音效"
+    ],
+    "steps": [
+      "建立晶片圖案",
+      "將晶片設定為 Crystal 類別",
+      "放置晶片",
+      "建立重疊事件",
+      "分數加 1",
+      "銷毀晶片",
+      "加入取得音效",
+      "測試所有晶片"
+    ],
+    "test": [
+      "晶片可以看見",
+      "碰到晶片後分數增加",
+      "晶片取得後消失",
+      "原有終點仍可正常運作"
+    ],
+    "checklist": [
+      "晶片可以看見",
+      "分數會增加",
+      "晶片會消失",
+      "玩家仍可移動與跳躍"
+    ],
+    "commonErrors": [
+      "晶片沒有出現",
+      "晶片類別設成 Player",
+      "分數沒有增加",
+      "晶片沒有被銷毀"
+    ],
+    "rescue": [
+      "檢查 Crystal 類別",
+      "檢查重疊事件角色順序",
+      "確認銷毀的是 otherSprite"
+    ],
+    "starterProject": "arcade-projects/05-crystals-start.png",
+    "completeProject": "arcade-projects/05-crystals-complete.png",
+    "hardwareReminder": "已通過實體 Arcade 遊戲機操作測試。",
+    "phaseStatus": {
+      "summary": "已通過實體 Arcade 遊戲機操作測試。",
+      "hardwareTarget": "N3",
+      "hardwareBootTested": true,
+      "hardwareTested": true,
+      "approved": false,
+      "passed": [
+        "UF2 成功產生或下載",
+        "UF2 成功傳入遊戲機",
+        "遊戲機成功重新啟動",
+        "畫面可正常顯示",
+        "左右移動",
+        "A 鍵跳躍",
+        "晶片取得",
+        "分數顯示",
+        "取得音效",
+        "重新開始"
+      ],
+      "pending": [
+        "終點過關",
+        "防止空中無限跳躍",
+        "晶片取得後消失逐項紀錄",
+        "分數重新歸零",
+        "晶片重新出現",
+        "玩家回到正確位置",
+        "長時間操作是否穩定"
+      ],
+      "images": [
+        "assets/screenshots/phase3-hardware-download-options.png",
+        "assets/screenshots/phase3-hardware-n3-selection.png"
+      ]
+    },
+    "downloadMode": "project",
+    "mediaAssets": [
+      {
+        "title": "Phase 3 遊戲畫面",
+        "type": "game-preview",
+        "path": "assets/screenshots/phase-3-game-preview.png",
+        "alt": "Phase 3 能量晶片與得分系統的遊戲畫面",
+        "status": "generated"
+      }
+    ]
+  }
+]

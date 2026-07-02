@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>教師專區｜晶片勇者營隊</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pixel-theme.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/teacher.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+    <header class="site-header" data-site-header></header>
+    <main class="page" id="main">
+      <header class="page-header">
+        <h1 class="page-title">教師專區</h1>
+        <p class="page-lede">教師與助教使用的課程節奏、備援策略、實機排查與設備管理入口。任務0至任務5已接入目前教材與硬體測試狀態。</p>
+      </header>
+      <section class="section grid two" data-schedule></section>
+      <section class="section grid two">
+        <article class="card"><div class="card-body"><h2>卡關超過5分鐘</h2><p>先判斷是否為介面操作、積木邏輯或檔案遺失。若無法快速修復，改用前一階段備援檔，保留原作品再接回課程。</p></div></article>
+        <article class="card"><div class="card-body"><h2>設備管理</h2><p>後續階段會補上設備編號、USB 線檢查、借還清點與最後 10 分鐘收拾流程。</p></div></article>
+      </section>
+      <section class="section card">
+        <div class="card-body stack">
+          <h2>Phase 3 實機狀態</h2>
+          <p>已通過實體 Arcade 遊戲機操作測試。終點過關與長時間穩定性尚需補充紀錄，因此尚未標為 approved。</p>
+          <div class="actions">
+            <span class="badge good">UF2 下載 passed</span>
+            <span class="badge good">N3 操作 passed</span>
+            <span class="badge warn">終點與穩定性 pending</span>
+          </div>
+          <div class="grid two">
+            <img class="evidence-image" src="assets/screenshots/phase3-hardware-download-options.png" alt="Phase 3 MakeCode下載選項截圖">
+            <img class="evidence-image" src="assets/screenshots/phase3-hardware-n3-selection.png" alt="Phase 3 N3硬體選擇截圖">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+  </body>
+</html>

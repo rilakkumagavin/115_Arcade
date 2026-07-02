@@ -1,0 +1,126 @@
+{
+  "phase": "Phase 3",
+  "title": "能量晶片與得分系統",
+  "summary": "????? Arcade ????????",
+  "generated": true,
+  "importTested": true,
+  "simulatorTested": true,
+  "hardwareBootTested": true,
+  "hardwareTested": true,
+  "approved": false,
+  "hardwareTarget": "N3",
+  "hardwareNotes": "??????????Arcade??????????????A????????????????????????????????????????????",
+  "evidenceImages": [
+    {
+      "path": "assets/screenshots/phase3-hardware-download-options.png",
+      "alt": "MakeCode Arcade 下載選項畫面，包含 Choose Hardware 與 Download as File。"
+    },
+    {
+      "path": "assets/screenshots/phase3-hardware-n3-selection.png",
+      "alt": "MakeCode Arcade 硬體選擇畫面，已改選 N3。"
+    }
+  ],
+  "passedHardwareBootItems": [
+    "UF2成功產生或下載",
+    "UF2成功傳入遊戲機",
+    "遊戲機成功重新啟動",
+    "遊戲可在實體Arcade硬體上執行",
+    "畫面可正常顯示"
+  ],
+  "pendingHardwareFunctionItems": [
+    "左方向鍵移動",
+    "右方向鍵移動",
+    "A鍵跳躍",
+    "防止空中無限跳躍",
+    "晶片正常顯示",
+    "晶片可以取得",
+    "晶片取得後消失",
+    "分數正確增加",
+    "取得音效正常播放",
+    "終點過關",
+    "遊戲重新開始",
+    "分數重新歸零",
+    "晶片重新出現",
+    "玩家回到正確位置",
+    "長時間操作是否穩定"
+  ],
+  "files": [
+    {
+      "fileName": "main.ts",
+      "path": "arcade-projects/phase3-crystals-score/main.ts",
+      "purpose": "Phase 3 MakeCode Arcade TypeScript 主程式。",
+      "status": "simulator-tested",
+      "exists": true,
+      "importTested": true,
+      "simulatorTested": true,
+      "hardwareBootTested": true,
+      "hardwareTested": false
+    },
+    {
+      "fileName": "phase3-crystals-score.txt.mkcd",
+      "path": "arcade-projects/phase3-crystals-score.txt.mkcd",
+      "purpose": "Phase 3 文字專案包，可供人工拖入 MakeCode Arcade 測試。",
+      "status": "import-tested",
+      "exists": true,
+      "importTested": true,
+      "simulatorTested": true,
+      "hardwareBootTested": true,
+      "hardwareTested": false
+    },
+    {
+      "fileName": "phase3-crystals-simulator-fullscreen-retry.png",
+      "path": "docs/testing/phase3-crystals-simulator-fullscreen-retry.png",
+      "purpose": "Phase 3 模擬器畫面截圖，確認分數0、玩家與晶片可見。",
+      "status": "simulator-tested",
+      "exists": true,
+      "importTested": false,
+      "simulatorTested": true,
+      "hardwareBootTested": false,
+      "hardwareTested": false
+    },
+    {
+      "fileName": "05-crystals-start.png",
+      "path": "arcade-projects/05-crystals-start.png",
+      "purpose": "任務5起始 MakeCode PNG，待人工匯出。",
+      "status": "missing",
+      "exists": false,
+      "importTested": false,
+      "simulatorTested": false,
+      "hardwareBootTested": false,
+      "hardwareTested": false
+    },
+    {
+      "fileName": "05-crystals-complete.png",
+      "path": "arcade-projects/05-crystals-complete.png",
+      "purpose": "任務5完成 MakeCode PNG，待人工匯出。",
+      "status": "missing",
+      "exists": false,
+      "importTested": false,
+      "simulatorTested": false,
+      "hardwareBootTested": false,
+      "hardwareTested": false
+    },
+    {
+      "fileName": "phase-3-crystals-score.png",
+      "path": "arcade-projects/phase-3-crystals-score.png",
+      "purpose": "Phase 3 晶片與得分系統 MakeCode PNG，待人工匯出。",
+      "status": "missing",
+      "exists": false,
+      "importTested": false,
+      "simulatorTested": false,
+      "hardwareBootTested": false,
+      "hardwareTested": false
+    },
+    {
+      "fileName": "afternoon-backup.png",
+      "path": "arcade-projects/afternoon-backup.png",
+      "purpose": "下午備援 MakeCode PNG，待任務5完成檔匯出後建立。",
+      "status": "missing",
+      "exists": false,
+      "importTested": false,
+      "simulatorTested": false,
+      "hardwareBootTested": false,
+      "hardwareTested": false
+    }
+  ]
+}

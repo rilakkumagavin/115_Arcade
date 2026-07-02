@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>下載中心｜晶片勇者營隊</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pixel-theme.css">
+    <script src="js/app.js" defer></script>
+    <script src="js/downloads.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+    <header class="site-header" data-site-header></header>
+    <main class="page" id="main">
+      <header class="page-header">
+        <h1 class="page-title">下載中心</h1>
+        <p class="page-lede">此處列出 MakeCode PNG、UF2、專案包與 PDF 的真實狀態。缺少的項目會標示為 missing，不提供失效下載。</p>
+      </header>
+      <section class="section card">
+        <div class="card-body stack">
+          <h2>Phase 3 實體遊戲機狀態</h2>
+          <p>已通過實體 Arcade 遊戲機操作測試。缺少的 PNG 與 UF2 實檔會以停用按鈕顯示，不會建立假檔案。</p>
+          <div class="actions">
+            <span class="badge good">UF2 傳輸與啟動 passed</span>
+            <span class="badge good">左右移動、跳躍、晶片 passed</span>
+            <span class="badge warn">終點與穩定性 pending</span>
+            <span class="badge">硬體：N3</span>
+          </div>
+          <div class="grid two">
+            <img class="evidence-image" src="assets/screenshots/phase3-hardware-download-options.png" alt="MakeCode Arcade下載選項截圖">
+            <img class="evidence-image" src="assets/screenshots/phase3-hardware-n3-selection.png" alt="MakeCode Arcade N3硬體選擇截圖">
+          </div>
+        </div>
+      </section>
+      <section data-downloads-table></section>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+  </body>
+</html>

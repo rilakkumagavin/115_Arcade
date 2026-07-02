@@ -1,0 +1,31 @@
+{
+  "title": "六小時課程流程",
+  "sessions": [
+    {
+      "name": "上午3小時",
+      "items": [
+        { "time": "09:00-09:20", "lessonId": 0, "title": "認識遊戲機與完成版試玩" },
+        { "time": "09:20-09:45", "lessonId": 1, "title": "建立玩家角色" },
+        { "time": "09:45-10:10", "lessonId": 2, "title": "控制玩家左右移動" },
+        { "time": "10:10-10:20", "lessonId": null, "title": "短休息與進度確認" },
+        { "time": "10:20-10:55", "lessonId": 3, "title": "建立 Tilemap 與地面" },
+        { "time": "10:55-11:25", "lessonId": 4, "title": "加入重力與跳躍" },
+        { "time": "11:25-11:50", "lessonId": 9, "title": "第一次實機下載" },
+        { "time": "11:50-12:00", "lessonId": null, "title": "上午收束與備援整理" }
+      ]
+    },
+    {
+      "name": "下午3小時",
+      "items": [
+        { "time": "13:00-13:15", "lessonId": null, "title": "上午成果回顧與備援同步" },
+        { "time": "13:15-13:45", "lessonId": 5, "title": "加入能量晶片與得分" },
+        { "time": "13:45-14:20", "lessonId": 6, "title": "加入怪物與生命" },
+        { "time": "14:20-14:45", "lessonId": 7, "title": "建立終點與過關條件" },
+        { "time": "14:45-15:00", "lessonId": 8, "title": "個人化方向說明" },
+        { "time": "15:00-15:40", "lessonId": 8, "title": "自由創作、完整實作、實機測試" },
+        { "time": "15:40-15:50", "lessonId": 9, "title": "存檔、下載確認、設備整理" },
+        { "time": "15:50-16:00", "lessonId": null, "title": "展示、清點、離場準備" }
+      ]
+    }
+  ]
+}

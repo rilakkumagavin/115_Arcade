@@ -1,0 +1,50 @@
+[
+  {
+    "id": "05-crystals-start",
+    "plannedFile": "arcade-projects/05-crystals-start.png",
+    "type": "MakeCode PNG",
+    "scope": "任務5起始檔。承接 Phase 2 最小可玩版本，不含晶片與得分。",
+    "status": "missing",
+    "exists": false,
+    "importTested": false,
+    "simulatorTested": false,
+    "hardwareTested": false,
+    "nextProductionStep": "由 Phase 2 最小可玩版本匯出真正 PNG，重新匯入測試後作為任務5起點。"
+  },
+  {
+    "id": "05-crystals-complete",
+    "plannedFile": "arcade-projects/05-crystals-complete.png",
+    "type": "MakeCode PNG",
+    "scope": "任務5完成檔。包含 Crystal 類別、固定晶片、得分、銷毀與取得音效。",
+    "status": "missing",
+    "exists": false,
+    "importTested": false,
+    "simulatorTested": false,
+    "hardwareTested": false,
+    "nextProductionStep": "將 phase3-crystals-score 專案貼入 MakeCode Arcade，完整測試後匯出真正 PNG。"
+  },
+  {
+    "id": "phase-3-crystals-score",
+    "plannedFile": "arcade-projects/phase-3-crystals-score.png",
+    "type": "MakeCode PNG",
+    "scope": "Phase 3 晶片與得分系統完整專案 PNG。",
+    "status": "missing",
+    "exists": false,
+    "importTested": false,
+    "simulatorTested": false,
+    "hardwareTested": false,
+    "nextProductionStep": "待 MakeCode Arcade 匯出真正 PNG，不可建立假 PNG。"
+  },
+  {
+    "id": "afternoon-backup",
+    "plannedFile": "arcade-projects/afternoon-backup.png",
+    "type": "MakeCode PNG",
+    "scope": "下午備援檔。建議等同任務5完成狀態。",
+    "status": "missing",
+    "exists": false,
+    "importTested": false,
+    "simulatorTested": false,
+    "hardwareTested": false,
+    "nextProductionStep": "由 05-crystals-complete 另存，重新匯入測試後才能提供下載。"
+  }
+]

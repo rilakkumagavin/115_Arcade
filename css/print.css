@@ -1,0 +1,17 @@
+@media print {
+  .site-header,
+  .site-footer,
+  .actions {
+    display: none;
+  }
+
+  body {
+    background: #fff;
+    color: #000;
+  }
+
+  .page {
+    width: 100%;
+    padding: 0;
+  }
+}

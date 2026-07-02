@@ -1,0 +1,42 @@
+{
+  "lessonId": 2,
+  "projectName": "M02_玩家左右移動",
+  "sourcePath": "C:/Users/user/Downloads/arcade-M02_玩家左右移動.hex",
+  "copiedPath": "C:/Users/user/Documents/Codex/115_Arcade/downloads/projects/mission-2-complete/arcade-M02_玩家左右移動.hex",
+  "fileName": "arcade-M02_玩家左右移動.hex",
+  "extension": ".hex",
+  "fileSize": 717341,
+  "createdAt": "2026-07-02 21:54:24",
+  "modifiedAt": "2026-07-02 21:54:24",
+  "sha256": "4A115D36707CDAB4BF5B5852134226D3BE5403E0072C1D0186E22B03D68C876A",
+  "zeroByte": false,
+  "generated": true,
+  "importTested": true,
+  "blocksTested": true,
+  "simulatorTested": true,
+  "hardwareTested": false,
+  "manualControlTested": true,
+  "approved": true,
+  "contentCheck": {
+    "hasPlayerSprite": true,
+    "hasPlayerKind": true,
+    "hasInitialPosition": true,
+    "hasMovement": true,
+    "vx": 90,
+    "vy": 0,
+    "hasStayInScreen": true,
+    "hasGravity": false,
+    "hasJump": false,
+    "hasTilemap": false,
+    "hasCrystal": false,
+    "hasEnemy": false,
+    "hasGoal": false
+  },
+  "manualControlTest": {
+    "leftMovesLeft": true,
+    "rightMovesRight": true,
+    "releaseStops": true,
+    "staysInScreenAtEdge": true
+  },
+  "notes": "重新匯入 MakeCode Arcade 後可切回積木，模擬器可啟動；使用者確認左右移動、放開停止與畫面邊界正常。"
+}

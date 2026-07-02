@@ -1,0 +1,12 @@
+{
+  "name": "chip-hero-campus-adventure-phase3-crystals-score",
+  "description": "Phase 3 MakeCode Arcade platformer with energy crystals and score for Chip Hero: Campus Adventure.",
+  "dependencies": {
+    "device": "*"
+  },
+  "files": [
+    "main.ts",
+    "README.md"
+  ],
+  "preferredEditor": "tsprj"
+}

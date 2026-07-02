@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>完成版遊戲展示｜晶片勇者營隊</title>
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pixel-theme.css">
+    <script src="js/app.js" defer></script>
+  </head>
+  <body>
+    <a class="skip-link" href="#main">跳到主要內容</a>
+    <header class="site-header" data-site-header></header>
+    <main class="page" id="main">
+      <header class="page-header">
+        <h1 class="page-title">完成版遊戲展示</h1>
+        <p class="page-lede">目前展示 Phase 3 能量晶片版本的實際畫面與硬體測試狀態。完整完成版模擬器與最終答案檔會在後續完成匯出與驗證後接入。</p>
+      </header>
+      <section class="grid two">
+        <div class="card"><div class="card-body stack"><h2>遊戲完成效果截圖</h2><a href="assets/screenshots/phase-3-game-preview.png" target="_blank" rel="noopener"><img class="evidence-image" src="assets/screenshots/phase-3-game-preview.png" alt="Phase 3能量晶片遊戲畫面"></a></div></div>
+        <div class="card"><div class="card-body stack"><h2>遊戲規則</h2><ul class="info-list"><li>左右移動並跳過平台。</li><li>收集能量晶片取得分數。</li><li>避開巡邏怪物並抵達終點傳送門。</li></ul></div></div>
+      </section>
+      <section class="section card">
+        <div class="card-body stack">
+          <h2>完成版檔案欄位</h2>
+          <p>完整完成版檔案尚未進入最終驗證；目前只接入 Phase 3 已存在的原始碼與專案包。</p>
+          <div class="actions">
+            <button class="btn is-disabled" disabled>MakeCode 分享連結：待建立</button>
+            <button class="btn is-disabled" disabled>08-final-game.png：待建立</button>
+            <button class="btn is-disabled" disabled>final-game.uf2：待最終版驗證</button>
+            <button class="btn is-disabled" disabled>teacher-answer.png：待建立</button>
+          </div>
+        </div>
+      </section>
+      <section class="section card">
+        <div class="card-body stack">
+          <h2>Phase 2 最小可玩版本狀態</h2>
+          <p>TypeScript 原始碼已建立並在 MakeCode Arcade 編輯器中做過模擬器煙霧測試；PNG 與 UF2 實檔尚未保存到本網站。</p>
+          <div class="actions">
+            <a class="btn secondary" href="arcade-projects/phase2-minimal/main.ts">查看 TypeScript</a>
+            <button class="btn is-disabled" disabled>缺少檔案：phase-2-minimum-game.png</button>
+            <button class="btn is-disabled" disabled>硬體操作：由 Phase 3 版本驗證</button>
+          </div>
+        </div>
+      </section>
+      <section class="section card">
+        <div class="card-body stack">
+          <h2>Phase 3 能量晶片版本狀態</h2>
+          <p>已通過實體 Arcade 遊戲機操作測試。</p>
+          <div class="actions">
+            <span class="badge good">左右移動 passed</span>
+            <span class="badge good">跳躍與晶片 passed</span>
+            <span class="badge warn">終點與長時間穩定性 pending</span>
+            <span class="badge">硬體：N3</span>
+          </div>
+          <div class="grid two">
+            <img class="evidence-image" src="assets/screenshots/phase3-hardware-download-options.png" alt="Phase 3下載選項截圖">
+            <img class="evidence-image" src="assets/screenshots/phase3-hardware-n3-selection.png" alt="Phase 3 N3硬體選擇截圖">
+          </div>
+        </div>
+      </section>
+    </main>
+    <footer class="site-footer" data-site-footer></footer>
+  </body>
+</html>

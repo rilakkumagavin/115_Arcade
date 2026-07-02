@@ -1,0 +1,12 @@
+{
+  "name": "chip-hero-campus-adventure-phase2-minimal",
+  "description": "Phase 2 minimal playable MakeCode Arcade platformer for Chip Hero: Campus Adventure.",
+  "dependencies": {
+    "device": "*"
+  },
+  "files": [
+    "main.ts",
+    "README.md"
+  ],
+  "preferredEditor": "tsprj"
+}

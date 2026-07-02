@@ -1,0 +1,101 @@
+[
+  {
+    "id": "01-player-start",
+    "plannedFile": "arcade-projects/01-player-start.png",
+    "type": "MakeCode PNG",
+    "scope": "任務1起始檔。尚未建立玩家，供學生從教師指定範本開始。",
+    "status": "missing",
+    "sourceAvailable": false,
+    "nextProductionStep": "在 MakeCode Arcade 建立任務1起始專案後，匯出真正 PNG 並重新匯入測試。"
+  },
+  {
+    "id": "01-player-complete",
+    "plannedFile": "arcade-projects/01-player-complete.png",
+    "type": "MakeCode PNG",
+    "scope": "任務1完成檔。包含原創玩家 Sprite 與初始顯示。",
+    "status": "missing",
+    "sourceAvailable": true,
+    "sourceBasis": "arcade-projects/phase2-minimal/main.ts",
+    "nextProductionStep": "保留玩家建立相關程式，移除後續移動、地圖與跳躍內容後匯出 PNG。"
+  },
+  {
+    "id": "02-movement-start",
+    "plannedFile": "arcade-projects/02-movement-start.png",
+    "type": "MakeCode PNG",
+    "scope": "任務2起始檔。承接任務1完成狀態。",
+    "status": "missing",
+    "sourceAvailable": true,
+    "sourceBasis": "arcade-projects/01-player-complete.png",
+    "nextProductionStep": "由任務1完成檔另存，作為左右移動教學起點。"
+  },
+  {
+    "id": "02-movement-complete",
+    "plannedFile": "arcade-projects/02-movement-complete.png",
+    "type": "MakeCode PNG",
+    "scope": "任務2完成檔。玩家可左右移動。",
+    "status": "missing",
+    "sourceAvailable": true,
+    "sourceBasis": "arcade-projects/phase2-minimal/main.ts",
+    "nextProductionStep": "保留 player 與 controller.moveSprite，匯出 PNG 並重新匯入測試。"
+  },
+  {
+    "id": "03-tilemap-start",
+    "plannedFile": "arcade-projects/03-tilemap-start.png",
+    "type": "MakeCode PNG",
+    "scope": "任務3起始檔。承接任務2完成狀態。",
+    "status": "missing",
+    "sourceAvailable": true,
+    "sourceBasis": "arcade-projects/02-movement-complete.png",
+    "nextProductionStep": "由任務2完成檔另存，作為 Tilemap 教學起點。"
+  },
+  {
+    "id": "03-tilemap-complete",
+    "plannedFile": "arcade-projects/03-tilemap-complete.png",
+    "type": "MakeCode PNG",
+    "scope": "任務3完成檔。包含簡單 Tilemap、牆壁圖塊、起點與攝影機跟隨。",
+    "status": "missing",
+    "sourceAvailable": true,
+    "sourceBasis": "arcade-projects/phase2-minimal/main.ts",
+    "nextProductionStep": "保留 tilemap、牆壁、起點與攝影機跟隨，視課程切分移除跳躍後匯出 PNG。"
+  },
+  {
+    "id": "04-jump-start",
+    "plannedFile": "arcade-projects/04-jump-start.png",
+    "type": "MakeCode PNG",
+    "scope": "任務4起始檔。承接任務3完成狀態。",
+    "status": "missing",
+    "sourceAvailable": true,
+    "sourceBasis": "arcade-projects/03-tilemap-complete.png",
+    "nextProductionStep": "由任務3完成檔另存，作為重力與跳躍教學起點。"
+  },
+  {
+    "id": "04-jump-complete",
+    "plannedFile": "arcade-projects/04-jump-complete.png",
+    "type": "MakeCode PNG",
+    "scope": "任務4完成檔。包含重力與只能踩地跳躍。",
+    "status": "missing",
+    "sourceAvailable": true,
+    "sourceBasis": "arcade-projects/phase2-minimal/main.ts",
+    "nextProductionStep": "保留 ay、A 鍵事件與 isHittingTile 判斷，匯出 PNG 並重新匯入測試。"
+  },
+  {
+    "id": "phase-2-minimum-game",
+    "plannedFile": "arcade-projects/phase-2-minimum-game.png",
+    "type": "MakeCode PNG",
+    "scope": "Phase 2最小可玩版本。包含玩家、Tilemap、移動、重力、踩地跳躍、攝影機、終點與失敗重開流程。",
+    "status": "missing",
+    "sourceAvailable": true,
+    "sourceBasis": "arcade-projects/phase2-minimal/main.ts",
+    "nextProductionStep": "在 MakeCode Arcade 中確認完整通關後，使用專案儲存/匯出功能產生真正可重新匯入的 PNG。"
+  },
+  {
+    "id": "morning-backup",
+    "plannedFile": "arcade-projects/morning-backup.png",
+    "type": "MakeCode PNG",
+    "scope": "上午備援檔。建議等同任務4完成或 Phase 2最小可玩版本。",
+    "status": "missing",
+    "sourceAvailable": true,
+    "sourceBasis": "arcade-projects/phase2-minimal/main.ts",
+    "nextProductionStep": "由任務4完成檔或 Phase 2最小可玩版本另存，重新匯入測試後才能提供下載。"
+  }
+]

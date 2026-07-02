@@ -1,0 +1,91 @@
+{
+  "projectName": "M03_建立地圖與地面",
+  "lessonId": 3,
+  "sourcePath": "arcade-projects/mission-3/main.ts",
+  "exportedProject": {
+    "status": "generated",
+    "fileName": "arcade-M03_建立地圖與地面(1).hex",
+    "sourceDownloadPath": "C:/Users/user/Downloads/arcade-M03_建立地圖與地面(1).hex",
+    "copiedPath": "C:/Users/user/Documents/Codex/115_Arcade/downloads/projects/mission-3-complete/arcade-M03_建立地圖與地面(1).hex",
+    "extension": ".hex",
+    "fileSize": 726386,
+    "createdAt": "2026-07-02T14:24:20.562Z",
+    "modifiedAt": "2026-07-02T14:22:59.968Z",
+    "sha256": "not-calculated-per-user-request",
+    "zeroByte": false,
+    "notes": "Directly copied and integrated per user request. Import validation was intentionally skipped."
+  },
+  "tests": {
+    "createdInBrowser": true,
+    "blocksModeTested": true,
+    "simulatorTested": true,
+    "manualControlTested": true,
+    "importTested": false,
+    "approved": false
+  },
+  "contentCheck": {
+    "hasPlayer": true,
+    "hasPlayerKind": true,
+    "hasMovement": true,
+    "hasStayInScreen": true,
+    "hasTilemap": true,
+    "hasGround": true,
+    "hasPlatform": true,
+    "hasWallTiles": true,
+    "hasGravity": false,
+    "hasJump": false,
+    "hasCoins": false,
+    "hasEnemies": false,
+    "hasLife": false,
+    "hasGoal": false,
+    "hasCameraFollow": false
+  },
+  "screenshots": [
+    {
+      "path": "assets/screenshots/mission-3-game-preview.png",
+      "status": "captured"
+    },
+    {
+      "path": "assets/screenshots/mission-3-create-tilemap.png",
+      "status": "captured"
+    },
+    {
+      "path": "assets/screenshots/mission-3-edit-tilemap.png",
+      "status": "captured",
+      "notes": "Legacy supporting screenshot. The required wall-setting flow now uses native Tilemap Editor screenshots."
+    },
+    {
+      "path": "assets/screenshots/mission-3-open-tilemap-editor.png",
+      "status": "captured"
+    },
+    {
+      "path": "assets/screenshots/mission-3-select-ground-tile.png",
+      "status": "captured"
+    },
+    {
+      "path": "assets/screenshots/mission-3-enable-wall-tool.png",
+      "status": "captured"
+    },
+    {
+      "path": "assets/screenshots/mission-3-wall-marked-map.png",
+      "status": "captured"
+    },
+    {
+      "path": "assets/screenshots/mission-3-wall-setting-comparison.png",
+      "status": "captured"
+    },
+    {
+      "path": "assets/screenshots/mission-3-set-wall.png",
+      "status": "captured",
+      "notes": "Moved to advanced supplement for coordinate-based wall setting."
+    },
+    {
+      "path": "assets/screenshots/mission-3-place-player.png",
+      "status": "captured"
+    },
+    {
+      "path": "assets/screenshots/mission-3-main-blocks.png",
+      "status": "captured"
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "fileName": "phase2-minimal.txt.mkcd",
+    "path": "arcade-projects/phase2-minimal.txt.mkcd",
+    "purpose": "Phase 2文字專案包，可供人工拖入 MakeCode Arcade 測試。",
+    "status": "generated",
+    "importTested": false,
+    "simulatorTested": false,
+    "hardwareTested": false
+  },
+  {
+    "fileName": "phase2-minimal-source.zip",
+    "path": "arcade-projects/phase2-minimal-source.zip",
+    "purpose": "Phase 2原始碼備份，不是 MakeCode PNG。",
+    "status": "generated",
+    "importTested": false,
+    "simulatorTested": false,
+    "hardwareTested": false
+  },
+  {
+    "fileName": "main.ts",
+    "path": "arcade-projects/phase2-minimal/main.ts",
+    "purpose": "Phase 2 MakeCode Arcade TypeScript 主程式。",
+    "status": "simulator-tested",
+    "importTested": false,
+    "simulatorTested": true,
+    "hardwareTested": false
+  },
+  {
+    "fileName": "phase2-audit-corrected-simulator.png",
+    "path": "docs/testing/phase2-audit-corrected-simulator.png",
+    "purpose": "稽核修正版貼回 MakeCode 後的模擬器截圖。",
+    "status": "simulator-tested",
+    "importTested": false,
+    "simulatorTested": true,
+    "hardwareTested": false
+  },
+  {
+    "fileName": "phase-2-minimum-game.png",
+    "path": "arcade-projects/phase-2-minimum-game.png",
+    "purpose": "Phase 2最小可玩版本 MakeCode PNG，待人工從 MakeCode 匯出。",
+    "status": "missing",
+    "importTested": false,
+    "simulatorTested": false,
+    "hardwareTested": false
+  },
+  {
+    "fileName": "morning-backup.png",
+    "path": "arcade-projects/morning-backup.png",
+    "purpose": "上午備援 MakeCode PNG，待任務4完成檔匯出後建立。",
+    "status": "missing",
+    "importTested": false,
+    "simulatorTested": false,
+    "hardwareTested": false
+  }
+]

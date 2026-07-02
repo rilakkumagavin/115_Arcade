@@ -1,0 +1,33 @@
+{
+  "lessonId": 1,
+  "projectName": "M01_建立玩家角色",
+  "sourcePath": "C:/Users/user/Downloads/arcade-M01_建立玩家角色.hex",
+  "copiedPath": "C:/Users/user/Documents/Codex/115_Arcade/downloads/projects/mission-1-complete/arcade-M01_建立玩家角色.hex",
+  "fileName": "arcade-M01_建立玩家角色.hex",
+  "extension": ".hex",
+  "fileSize": 710231,
+  "createdAt": "2026-07-02 21:55:39",
+  "modifiedAt": "2026-07-02 21:55:39",
+  "sha256": "AC3E00A7FC420093F792328B64E703EFB7AFC2476609E5E302EB9E9FD86FE1E1",
+  "zeroByte": false,
+  "generated": true,
+  "importTested": true,
+  "blocksTested": true,
+  "simulatorTested": true,
+  "hardwareTested": false,
+  "manualControlTested": false,
+  "approved": true,
+  "contentCheck": {
+    "hasPlayerSprite": true,
+    "hasPlayerKind": true,
+    "hasInitialPosition": true,
+    "hasMovement": false,
+    "hasGravity": false,
+    "hasJump": false,
+    "hasTilemap": false,
+    "hasCrystal": false,
+    "hasEnemy": false,
+    "hasGoal": false
+  },
+  "notes": "重新匯入 MakeCode Arcade 後可切回積木，模擬器可啟動，內容與任務1教材截圖一致。"
+}

@@ -1,0 +1,56 @@
+[
+  {
+    "fileName": "mission-1/main.ts",
+    "path": "arcade-projects/mission-1/main.ts",
+    "type": "TypeScript",
+    "purpose": "任務1：建立玩家角色的可複製 MakeCode Arcade 原始碼。",
+    "status": "generated",
+    "available": true,
+    "productionMethod": "已由 MakeCode Arcade 專案 M01_建立玩家角色驗證可轉回積木。"
+  },
+  {
+    "fileName": "arcade-M01_建立玩家角色.hex",
+    "path": "downloads/projects/mission-1-complete/arcade-M01_建立玩家角色.hex",
+    "type": "MakeCode HEX",
+    "purpose": "任務1完成版 MakeCode Arcade 匯出檔。",
+    "status": "approved",
+    "available": true,
+    "productionMethod": "已從 Downloads 複製並完成 MakeCode 重新匯入、積木模式與模擬器驗證。"
+  },
+  {
+    "fileName": "mission-2/main.ts",
+    "path": "arcade-projects/mission-2/main.ts",
+    "type": "TypeScript",
+    "purpose": "任務2：控制玩家左右移動的可複製 MakeCode Arcade 原始碼。",
+    "status": "generated",
+    "available": true,
+    "productionMethod": "已由 MakeCode Arcade 專案 M02_玩家左右移動驗證可轉回積木。"
+  },
+  {
+    "fileName": "arcade-M02_玩家左右移動.hex",
+    "path": "downloads/projects/mission-2-complete/arcade-M02_玩家左右移動.hex",
+    "type": "MakeCode HEX",
+    "purpose": "任務2完成版 MakeCode Arcade 匯出檔。",
+    "status": "approved",
+    "available": true,
+    "productionMethod": "已從 Downloads 複製並完成 MakeCode 重新匯入、積木模式、模擬器與人工左右移動測試。"
+  },
+  {
+    "fileName": "mission-3/main.ts",
+    "path": "arcade-projects/mission-3/main.ts",
+    "type": "TypeScript",
+    "purpose": "任務3 MakeCode Arcade 原始碼，建立玩家、左右移動、Tilemap、地面、平台與起點。",
+    "status": "generated",
+    "available": true,
+    "productionMethod": "由 MakeCode Arcade 新專案 M03_建立地圖與地面 使用的 TypeScript 保存而來。"
+  },
+  {
+    "fileName": "arcade-M03_建立地圖與地面(1).hex",
+    "path": "downloads/projects/mission-3-complete/arcade-M03_建立地圖與地面(1).hex",
+    "type": "MakeCode HEX",
+    "purpose": "任務3完成版可重新匯入 MakeCode Arcade 的專案檔。",
+    "status": "generated",
+    "available": true,
+    "productionMethod": "由 MakeCode Arcade Download as File 匯出後，依使用者指示直接複製接入；未重新匯入驗證。"
+  }
+]
