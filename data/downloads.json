@@ -52,5 +52,23 @@
     "status": "generated",
     "available": true,
     "productionMethod": "由 MakeCode Arcade Download as File 匯出後，依使用者指示直接複製接入；未重新匯入驗證。"
+  },
+  {
+    "fileName": "mission-4/main.ts",
+    "path": "arcade-projects/mission-4/main.ts",
+    "type": "TypeScript",
+    "purpose": "任務4 MakeCode Arcade 原始碼，加入重力、地面跳躍與防止空中連跳。",
+    "status": "simulator-tested",
+    "available": true,
+    "productionMethod": "已在 MakeCode Arcade M04_重力與跳躍中轉回積木，並完成基本模擬器操作測試。"
+  },
+  {
+    "fileName": "arcade-M04_重力與跳躍.hex",
+    "path": "",
+    "type": "MakeCode HEX",
+    "purpose": "任務4完成版 MakeCode Arcade 匯出檔。",
+    "status": "missing",
+    "available": false,
+    "productionMethod": "MakeCode 已完成 N3 編譯；等待人工將 Download Again 取得的檔案放入 Windows Downloads 後接入。"
   }
 ]

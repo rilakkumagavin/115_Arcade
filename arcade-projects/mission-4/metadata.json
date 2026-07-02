@@ -1,0 +1,58 @@
+{
+  "projectName": "M04_重力與跳躍",
+  "lessonId": 4,
+  "sourcePath": "arcade-projects/mission-4/main.ts",
+  "values": {
+    "gravityAy": 350,
+    "jumpVy": -150,
+    "reason": "採用教材建議的保守值，模擬器中的落地與跳躍速度適合初學者觀察。"
+  },
+  "exportedProject": {
+    "status": "missing",
+    "fileName": "arcade-M04_重力與跳躍.hex",
+    "sourceDownloadPath": "C:/Users/user/Downloads/arcade-M04_重力與跳躍.hex",
+    "copiedPath": "C:/Users/user/Documents/Codex/115_Arcade/downloads/projects/mission-4-complete/arcade-M04_重力與跳躍.hex",
+    "extension": ".hex",
+    "fileSize": 0,
+    "zeroByte": false,
+    "notes": "MakeCode 已完成 N3 編譯並顯示下載完成，但 in-app Browser 的隔離下載未寫入 Windows Downloads；不得啟用網站下載。"
+  },
+  "tests": {
+    "createdInBrowser": true,
+    "blocksModeTested": true,
+    "simulatorTested": true,
+    "manualControlTested": true,
+    "platformJumpRetestPending": true,
+    "importTested": false,
+    "hardwareTested": false,
+    "approved": false
+  },
+  "contentCheck": {
+    "hasPlayer": true,
+    "hasPlayerKind": true,
+    "hasMovement": true,
+    "hasStayInScreen": true,
+    "hasTilemap": true,
+    "hasGround": true,
+    "hasPlatform": true,
+    "hasWallTiles": true,
+    "hasGravity": true,
+    "hasGroundedJump": true,
+    "hasDoubleJump": false,
+    "hasCoins": false,
+    "hasScore": false,
+    "hasEnemies": false,
+    "hasLife": false,
+    "hasGoal": false,
+    "hasCameraFollow": false
+  },
+  "screenshots": [
+    {"path": "assets/screenshots/mission-4-game-preview.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-4-set-gravity.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-4-basic-jump.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-4-ground-check.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-4-jump-complete.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-4-main-blocks.png", "status": "captured"},
+    {"path": "assets/screenshots/mission-4-jump-test.png", "status": "captured"}
+  ]
+}

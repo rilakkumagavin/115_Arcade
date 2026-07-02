@@ -466,21 +466,24 @@
 },
   {
     "id": 4,
-    "title": "任務4：加入重力與跳躍",
+    "title": "任務4：重力與跳躍",
     "icon": "jump",
     "phase": "上午",
     "duration": "30分鐘",
-    "story": "後續才加入平台遊戲的重力與跳躍。",
+    "story": "晶片勇者已經走進校園資料通道。現在要加入重力與跳躍，讓角色真的能站在地面、跳起來，再自然落回地面。",
     "goals": [
-      "設定重力",
-      "設定 A 鍵跳躍",
-      "避免空中連跳"
+      "用 ay 設定向下的重力",
+      "按 A 鍵時用 vy 產生向上的跳躍速度",
+      "判斷玩家腳下是否碰到牆壁",
+      "避免玩家在空中連續跳躍",
+      "保留左右移動、Tilemap 與牆壁碰撞"
     ],
-    "result": "玩家可以站在地面上跳躍。",
+    "result": "玩家會受到重力落到地面。站在地面或平台時可以按 A 跳躍，空中再按 A 不會二段跳，落地後可以再次跳躍。",
     "concepts": [
-      "ay",
-      "vy",
-      "is hitting tile"
+      "速度 vy：負數往上，正數往下",
+      "加速度 ay：持續改變垂直速度",
+      "A 鍵按下事件",
+      "is hitting tile：判斷腳下是否碰牆"
     ],
     "categories": [
       "控制器",
@@ -488,25 +491,205 @@
       "場景"
     ],
     "steps": [
-      "後續任務處理"
+      "開啟「角色」分類，找到設定角色加速度 y（ay）的積木。",
+      "將 player 的 ay 設為 350。ay 是正數時，角色會一直受到向下的力量。",
+      "啟動模擬器，確認玩家向下掉、被地面擋住，而且不會穿過地面。",
+      "開啟「控制器」分類，加入「當 A 鍵被按下」事件。",
+      "先在 A 鍵事件中將 player 的 vy 設為 -150。負數會讓角色往上移動。",
+      "測試基本跳躍，觀察玩家升高後被重力拉回地面。",
+      "在 A 鍵事件中加入「如果 player 碰撞到下方的牆」條件。",
+      "把 vy = -150 放進條件裡，讓玩家只有腳下碰到地面或平台時才能跳。",
+      "再次測試：地面可跳、空中不能連跳、落地後可以再跳。"
     ],
     "test": [
-      "後續任務處理"
+      "遊戲啟動後，玩家會因重力向下掉並停在地面。",
+      "玩家不會穿過地面，左右移動仍正常。",
+      "按 A 鍵時玩家往上跳，之後自然落下。",
+      "空中連按 A 不會再次跳躍。",
+      "落地後按 A 可以再次跳躍。",
+      "玩家不會卡在牆壁裡，也不會跳出畫面後消失。",
+      "專案可切回積木模式，重新啟動模擬器後仍可執行。",
+      "站上平台與從平台起跳需要再做一次人工操作複驗。"
     ],
     "checklist": [
-      "後續任務處理"
+      "我有設定玩家的 ay。",
+      "玩家會受到重力向下掉。",
+      "玩家會停在地面上。",
+      "我有建立 A 鍵事件。",
+      "按 A 鍵可以跳躍。",
+      "玩家跳起後會落下。",
+      "玩家只有站在地面或平台時才能跳。",
+      "玩家不能在空中連續跳躍。",
+      "玩家落地後可以再次跳躍。",
+      "左右移動仍然正常。",
+      "我已在模擬器完成基本測試。",
+      "我已儲存專案。"
     ],
     "commonErrors": [
-      "後續任務處理"
+      "玩家完全不會掉下來：檢查 ay 是否設定在 player，而且不是 0。",
+      "玩家往上飛：ay 可能設成負數，重力的 ay 應使用正數。",
+      "按 A 鍵沒有跳：檢查 A 鍵事件、player 的 vy，以及 vy 是否為負數。",
+      "玩家按 A 往下衝：vy 可能設成正數，跳躍時應使用負數。",
+      "玩家可以在空中一直跳：加入腳下碰牆判斷，並把 vy 設定放在條件內。",
+      "玩家站在地面卻不能跳：檢查地面牆壁屬性、判斷方向是否為下方，以及玩家是否出生在牆壁裡。",
+      "玩家穿過地面：回任務3確認地面不只有圖案，還有牆壁屬性。",
+      "玩家跳得太低：把 vy 改成更小的負數，例如從 -120 改成 -150。",
+      "玩家跳得太高：把 vy 改成較接近 0 的負數，例如從 -200 改成 -150。",
+      "玩家落下太快：降低 ay。",
+      "玩家落下太慢：提高 ay。",
+      "左右移動失效：確認控制器移動積木仍綁定 player。"
     ],
     "rescue": [
-      "後續任務處理"
+      "先確認 ay = 350、跳躍 vy = -150，再逐項測試。",
+      "若玩家穿過地面，先回任務3修正牆壁屬性。",
+      "若空中可以連跳，確認 vy 積木位於腳下碰牆的條件內。",
+      "卡關超過5分鐘時，先使用教師的任務4 TypeScript 重新建立積木。"
     ],
-    "starterProject": "planned",
-    "completeProject": "planned",
-    "hardwareReminder": "後續任務再測試。",
+    "starterProject": "missing",
+    "completeProject": "missing",
+    "hardwareReminder": "模擬器基本操作已測試；實體 Arcade 遊戲機尚未測試，hardwareTested 保持 false。",
     "downloadMode": "project",
-    "mediaAssets": []
+    "downloadNote": "M04 已在 MakeCode Arcade 編譯為 N3 .hex，但 in-app Browser 尚未將檔案寫入 Windows Downloads，因此下載按鈕保持停用。",
+    "mediaAssets": [
+      {
+        "title": "任務4完成畫面",
+        "type": "game-preview",
+        "path": "assets/screenshots/mission-4-game-preview.png",
+        "alt": "按 A 鍵後，玩家會跳起來，再受到重力落回地面。",
+        "status": "captured"
+      },
+      {
+        "title": "設定重力",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-4-set-gravity.png",
+        "alt": "設定玩家的垂直加速度 ay，讓角色受到向下的重力。",
+        "status": "captured"
+      },
+      {
+        "title": "基本跳躍",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-4-basic-jump.png",
+        "alt": "按下 A 鍵時，給玩家一股向上的速度。",
+        "status": "captured"
+      },
+      {
+        "title": "地面判斷",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-4-ground-check.png",
+        "alt": "只有玩家腳下碰到地面或平台時，才允許跳躍。",
+        "status": "captured"
+      },
+      {
+        "title": "完整跳躍事件",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-4-jump-complete.png",
+        "alt": "加入地面判斷後，玩家不能在空中連續跳躍。",
+        "status": "captured"
+      },
+      {
+        "title": "任務4完整積木",
+        "type": "main-blocks",
+        "path": "assets/screenshots/mission-4-main-blocks.png",
+        "alt": "任務4完成後的完整積木。",
+        "status": "captured"
+      },
+      {
+        "title": "跳躍測試畫面",
+        "type": "game-preview",
+        "path": "assets/screenshots/mission-4-jump-test.png",
+        "alt": "測試玩家能從地面跳起，空中連按 A 不會再次起跳。",
+        "status": "captured"
+      }
+    ],
+    "customSections": [
+      {
+        "title": "先觀察重力",
+        "body": "將 ay 設成正數，玩家就會受到向下的重力。加速度會持續改變角色往上或往下的速度，所以玩家最後會落到有牆壁屬性的地面。",
+        "steps": [
+          "設定 player 的 ay 為 350。",
+          "重新啟動模擬器。",
+          "觀察玩家落下並停在地面。"
+        ]
+      },
+      {
+        "title": "加入 A 鍵跳躍",
+        "body": "跳躍不是把角色搬到上面，而是先給角色一股向上的速度，再讓重力把角色拉回來。vy 負數是往上，ay 正數會把角色慢慢拉回地面。",
+        "steps": [
+          "建立 A 鍵按下事件。",
+          "將 player 的 vy 設為 -150。",
+          "測試玩家是否先往上，再自然落下。"
+        ]
+      },
+      {
+        "title": "防止空中連跳",
+        "body": "只有玩家腳下碰到牆壁時才執行跳躍。這裡的牆壁也包含地板與平台。",
+        "steps": [
+          "加入如果條件。",
+          "判斷 player 是否碰撞到下方的牆。",
+          "把 vy = -150 放進條件中。",
+          "在空中連按 A，確認不會二段跳。"
+        ]
+      },
+      {
+        "title": "跳躍實驗室",
+        "body": "先比較不同數值，再恢復教師指定的穩定數值 ay = 350、vy = -150。",
+        "steps": [
+          "重力實驗：比較 ay = 200、350、500，觀察哪一個落下最快、哪一個比較像正常遊戲。",
+          "跳躍力量實驗：比較 vy = -100、-150、-200，觀察哪一個跳得最高、哪一個最容易控制。",
+          "實驗完成後，把數值恢復為 ay = 350、vy = -150。"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "為什麼 ay 要設成正數？",
+        "answer": "讓角色持續受到向下的力量。"
+      },
+      {
+        "question": "為什麼跳躍時 vy 要設成負數？",
+        "answer": "遊戲座標中往上移動需要負的垂直速度。"
+      },
+      {
+        "question": "為什麼要判斷腳下是否碰到牆壁？",
+        "answer": "避免角色在空中重複跳躍。"
+      },
+      {
+        "question": "地面看得到，玩家就一定站得住嗎？",
+        "answer": "不一定，地面還必須設定為牆壁。"
+      },
+      {
+        "question": "跳躍是直接改變角色位置嗎？",
+        "answer": "不是，是先設定向上的速度，再由重力拉回來。"
+      }
+    ],
+    "phaseStatus": {
+      "summary": "已完成 MakeCode Arcade 積木與模擬器基本操作測試；專案檔與實體硬體仍待完成。",
+      "hardwareTarget": "N3",
+      "generated": true,
+      "importTested": false,
+      "blocksTested": true,
+      "simulatorTested": true,
+      "hardwareTested": false,
+      "approved": false,
+      "passed": [
+        "獨立 M04 專案已建立",
+        "MakeCode 積木模式可開啟且問題數為 0",
+        "玩家受重力落地",
+        "地面碰撞正常",
+        "左右移動正常",
+        "A 鍵跳躍正常",
+        "空中連按 A 不會再次起跳",
+        "落地後可以再次跳躍",
+        "模擬器重新啟動後可執行"
+      ],
+      "pending": [
+        "站上平台並從平台起跳的人工操作複驗",
+        "真實 .hex 檔寫入 Windows Downloads",
+        "專案重新匯入驗證",
+        "實體 N3 遊戲機完整操作測試",
+        "長時間操作穩定性"
+      ]
+    }
   },
   {
     "id": 5,

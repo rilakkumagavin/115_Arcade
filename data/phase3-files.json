@@ -1,7 +1,7 @@
 {
   "phase": "Phase 3",
   "title": "能量晶片與得分系統",
-  "summary": "????? Arcade ????????",
+  "summary": "已通過實體 Arcade 遊戲機操作測試。",
   "generated": true,
   "importTested": true,
   "simulatorTested": true,
@@ -9,7 +9,7 @@
   "hardwareTested": true,
   "approved": false,
   "hardwareTarget": "N3",
-  "hardwareNotes": "??????????Arcade??????????????A????????????????????????????????????????????",
+  "hardwareNotes": "已確認可傳入 N3 Arcade 遊戲機並正常啟動；左右移動、A 鍵跳躍、晶片取得、分數顯示、取得音效與重新開始均已通過。",
   "evidenceImages": [
     {
       "path": "assets/screenshots/phase3-hardware-download-options.png",
@@ -25,20 +25,20 @@
     "UF2成功傳入遊戲機",
     "遊戲機成功重新啟動",
     "遊戲可在實體Arcade硬體上執行",
-    "畫面可正常顯示"
-  ],
-  "pendingHardwareFunctionItems": [
+    "畫面可正常顯示",
     "左方向鍵移動",
     "右方向鍵移動",
     "A鍵跳躍",
-    "防止空中無限跳躍",
-    "晶片正常顯示",
     "晶片可以取得",
-    "晶片取得後消失",
     "分數正確增加",
     "取得音效正常播放",
+    "遊戲重新開始"
+  ],
+  "pendingHardwareFunctionItems": [
+    "防止空中無限跳躍",
+    "晶片正常顯示",
+    "晶片取得後消失",
     "終點過關",
-    "遊戲重新開始",
     "分數重新歸零",
     "晶片重新出現",
     "玩家回到正確位置",
@@ -54,7 +54,7 @@
       "importTested": true,
       "simulatorTested": true,
       "hardwareBootTested": true,
-      "hardwareTested": false
+      "hardwareTested": true
     },
     {
       "fileName": "phase3-crystals-score.txt.mkcd",
@@ -65,7 +65,7 @@
       "importTested": true,
       "simulatorTested": true,
       "hardwareBootTested": true,
-      "hardwareTested": false
+      "hardwareTested": true
     },
     {
       "fileName": "phase3-crystals-simulator-fullscreen-retry.png",

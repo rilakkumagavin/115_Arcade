@@ -116,11 +116,11 @@ player = sprites.create(img`
 `, SpriteKind.Player)
 controller.moveSprite(player, 90, 0)
 player.setStayInScreen(true)
-player.ay = 500
+player.ay = 350
 tiles.placeOnTile(player, tiles.getTileLocation(2, 6))
 
 controller.A.onEvent(ControllerButtonEvent.Pressed, function () {
     if (player.isHittingTile(CollisionDirection.Bottom)) {
-        player.vy = -180
+        player.vy = -150
     }
 })
