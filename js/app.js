@@ -59,7 +59,10 @@ function renderChrome() {
 }
 
 async function loadJson(path) {
-  const response = await fetch(path);
+  const separator = path.includes("?") ? "&" : "?";
+  const response = await fetch(`${path}${separator}v=20260703-m07`, {
+    cache: "no-store"
+  });
   if (!response.ok) {
     throw new Error(`無法載入 ${path}`);
   }
