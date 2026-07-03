@@ -1,0 +1,28 @@
+{
+  "projectName": "M07_終點與過關",
+  "lessonId": 7,
+  "source": "arcade-projects/mission-7/main.ts",
+  "exportFile": "",
+  "generated": true,
+  "blocksTested": true,
+  "simulatorTested": true,
+  "manualControlTested": false,
+  "importTested": false,
+  "hardwareTested": false,
+  "approved": false,
+  "hardwareModel": "N3",
+  "lastVerifiedAt": "2026-07-03",
+  "passed": [
+    "獨立M07專案建立",
+    "積木模式轉換",
+    "模擬器啟動",
+    "Goal角色與過關事件"
+  ],
+  "pending": [
+    "抵達終點完整操作測試",
+    "勝利畫面測試",
+    "HEX匯出",
+    "重新匯入",
+    "N3實體硬體測試"
+  ]
+}

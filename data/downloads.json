@@ -106,5 +106,23 @@
     "status": "missing",
     "available": false,
     "productionMethod": "需在 MakeCode Arcade 使用 Download as File 匯出真正的 .hex 後再接入。"
+  },
+  {
+    "fileName": "mission-7/main.ts",
+    "path": "arcade-projects/mission-7/main.ts",
+    "type": "TypeScript",
+    "purpose": "任務7終點傳送門與過關條件的MakeCode Arcade原始程式。",
+    "status": "simulator-tested",
+    "available": true,
+    "productionMethod": "已在獨立M07專案轉回積木並啟動模擬器。"
+  },
+  {
+    "fileName": "arcade-M07_終點與過關.hex",
+    "path": "",
+    "type": "MakeCode HEX",
+    "purpose": "任務7完成版MakeCode Arcade匯出檔。",
+    "status": "missing",
+    "available": false,
+    "productionMethod": "需由MakeCode Arcade使用Download as File匯出真正的.hex。"
   }
 ]

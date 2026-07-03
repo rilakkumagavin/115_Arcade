@@ -1120,14 +1120,14 @@
         "type": "step-blocks",
         "path": "assets/screenshots/mission-6-safe-respawn.png",
         "alt": "碰撞後暫時開啟幽靈標記、回到安全起點，1秒後關閉保護。",
-        "status": "captured"
+        "status": "needs-recapture"
       },
       {
         "title": "任務6完整積木",
         "type": "main-blocks",
         "path": "assets/screenshots/mission-6-main-blocks.png",
         "alt": "任務6完成後的完整積木配置。",
-        "status": "captured"
+        "status": "needs-recapture"
       },
       {
         "title": "怪物巡邏測試",
@@ -1180,6 +1180,109 @@
       {
         "question": "怪物到巡邏邊界後要改變什麼？",
         "answer": "改變水平速度的正負方向。"
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "title": "任務7：建立終點與過關條件",
+    "icon": "goal",
+    "phase": "下午",
+    "duration": "25分鐘",
+    "story": "能源已經恢復，晶片勇者要穿越校園關卡，抵達最右側的傳送門。",
+    "goals": [
+      "建立Goal自訂SpriteKind",
+      "繪製原創傳送門並放在關卡終點",
+      "建立Player與Goal的重疊事件",
+      "播放過關音效並顯示勝利畫面",
+      "讓攝影機跟隨玩家前往地圖右端"
+    ],
+    "result": "玩家碰到地圖右端的傳送門後，會播放魔法音效並顯示彩紙勝利畫面。",
+    "concepts": [
+      "SpriteKind.Goal",
+      "Sprite重疊事件",
+      "game.over(true)",
+      "cameraFollowSprite"
+    ],
+    "categories": ["角色", "遊戲", "音效", "場景"],
+    "steps": [
+      "建立Goal自訂角色類別。",
+      "繪製原創傳送門圖案。",
+      "把傳送門建立為Goal角色。",
+      "將傳送門放在地圖第18欄、第6列。",
+      "加入攝影機跟隨玩家。",
+      "建立Player與Goal重疊事件。",
+      "播放過關音效並以彩紙效果顯示勝利。"
+    ],
+    "test": [
+      "TypeScript可轉回積木模式。",
+      "模擬器可啟動且問題數為0。",
+      "傳送門與過關事件積木已確認。",
+      "待人工複驗：玩家可移動到地圖右側並碰到傳送門。",
+      "待人工複驗：音效與勝利畫面正常。"
+    ],
+    "checklist": [
+      "我有建立Goal類別。",
+      "我有繪製原創傳送門。",
+      "傳送門放在關卡最右側。",
+      "我有建立Player與Goal重疊事件。",
+      "碰到傳送門會播放音效並顯示勝利。",
+      "原有移動、跳躍、晶片、怪物與生命功能仍保留。"
+    ],
+    "commonErrors": [
+      "傳送門類別設成Enemy。",
+      "傳送門放在牆壁裡或地圖外。",
+      "重疊事件選錯角色類別。",
+      "把遊戲結束結果設成失敗。",
+      "忘記攝影機跟隨，玩家到不了地圖右端。"
+    ],
+    "rescue": [
+      "確認傳送門使用Goal類別。",
+      "確認傳送門位於第18欄、第6列。",
+      "確認重疊事件是Player與Goal。",
+      "確認game over結果為勝利。",
+      "確認程式中有攝影機跟隨玩家。"
+    ],
+    "starterProject": "missing",
+    "completeProject": "missing",
+    "hardwareReminder": "尚未進行N3實體硬體測試，需確認攝影機捲動、終點、音效與勝利畫面。",
+    "downloadMode": "project",
+    "downloadNote": "目前提供TypeScript；真正的M07 .hex尚未匯出，下載按鈕保持停用。",
+    "phaseStatus": {
+      "generated": true,
+      "blocksTested": true,
+      "simulatorTested": true,
+      "hardwareTested": false,
+      "approved": false,
+      "passed": [
+        "獨立M07專案已建立",
+        "TypeScript可轉回積木",
+        "模擬器可啟動",
+        "Goal角色、放置位置與過關事件積木已確認",
+        "攝影機跟隨程式已補回"
+      ],
+      "pending": [
+        "抵達終點完整操作測試",
+        "勝利音效與畫面測試",
+        "完成效果圖擷取",
+        "M07 .hex匯出",
+        "重新匯入與N3硬體測試"
+      ]
+    },
+    "mediaAssets": [
+      {
+        "title": "建立終點傳送門",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-7-create-goal.png",
+        "alt": "建立Goal傳送門並放在地圖第18欄、第6列。",
+        "status": "captured"
+      },
+      {
+        "title": "碰到終點時過關",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-7-goal-overlap.png",
+        "alt": "玩家碰到Goal時播放魔法音效並顯示彩紙勝利效果。",
+        "status": "captured"
       }
     ]
   }
