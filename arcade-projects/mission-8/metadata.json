@@ -1,0 +1,15 @@
+{
+  "projectName": "M08_個人化遊戲",
+  "lessonId": 8,
+  "source": "arcade-projects/mission-8/main.ts",
+  "exportFile": "",
+  "generated": true,
+  "blocksTested": false,
+  "simulatorTested": false,
+  "importTested": false,
+  "hardwareTested": false,
+  "approved": false,
+  "hardwareModel": "N3",
+  "lastVerifiedAt": "2026-07-03",
+  "notes": "安全個人化範例只修改背景顏色；瀏覽器操作中斷，所有MakeCode與硬體測試待完成。"
+}
