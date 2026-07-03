@@ -88,5 +88,23 @@
     "status": "missing",
     "available": false,
     "productionMethod": "MakeCode 已選擇 N3 編譯；等待檔案實際寫入 Windows Downloads 後接入。"
+  },
+  {
+    "fileName": "mission-6/main.ts",
+    "path": "arcade-projects/mission-6/main.ts",
+    "type": "TypeScript",
+    "purpose": "任務6 MakeCode Arcade 原始程式，包含怪物、生命、巡邏、碰撞扣血與安全重生。",
+    "status": "simulator-tested",
+    "available": true,
+    "productionMethod": "已在獨立 M06 專案轉回積木，並完成生命初始值、怪物顯示與巡邏基本測試。"
+  },
+  {
+    "fileName": "arcade-M06_怪物與生命.hex",
+    "path": "",
+    "type": "MakeCode HEX",
+    "purpose": "任務6完成版 MakeCode Arcade 匯出檔。",
+    "status": "missing",
+    "available": false,
+    "productionMethod": "需在 MakeCode Arcade 使用 Download as File 匯出真正的 .hex 後再接入。"
   }
 ]

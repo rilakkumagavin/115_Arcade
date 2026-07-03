@@ -968,5 +968,219 @@
         "answer": "固定位置比較容易測試，也能確保每一枚晶片都取得得到。"
       }
     ]
+  },
+  {
+    "id": 6,
+    "title": "任務6：加入怪物與生命",
+    "icon": "enemy",
+    "phase": "下午",
+    "duration": "35分鐘",
+    "story": "校園防護機器人受到干擾，開始在平台附近巡邏。晶片勇者要避開它們，保護自己的三顆生命，才能繼續修復傳送門。",
+    "goals": [
+      "建立原創巡邏怪物並設定為 Enemy 類別",
+      "設定遊戲開始時有3點生命",
+      "讓怪物在固定範圍來回巡邏",
+      "建立玩家碰到怪物時扣1點生命的事件",
+      "加入安全重生與短暫保護，避免連續扣血"
+    ],
+    "result": "地圖中會出現兩隻巡邏怪物。玩家碰到怪物時生命減少1點，畫面震動並回到安全起點，接著獲得1秒不會再次碰撞怪物的保護時間。",
+    "concepts": [
+      "SpriteKind.Enemy",
+      "info.setLife",
+      "Sprite重疊事件",
+      "速度與巡邏範圍",
+      "GhostThroughSprites",
+      "安全重生"
+    ],
+    "categories": [
+      "角色",
+      "資訊",
+      "遊戲",
+      "場景",
+      "迴圈"
+    ],
+    "steps": [
+      "在遊戲開始時將生命設為3。",
+      "繪製原創怪物圖案，建立兩個 Enemy 類別的怪物。",
+      "把怪物放在地面上的固定位置，並設定不同的水平速度。",
+      "每隔100毫秒檢查怪物位置，碰到巡邏邊界時改變移動方向。",
+      "建立 Player 與 Enemy 的重疊事件。",
+      "重疊時生命減少1，並讓鏡頭短暫震動。",
+      "暫時開啟玩家的 GhostThroughSprites，將玩家放回安全起點。",
+      "等待1秒後關閉保護狀態。",
+      "啟動模擬器，先確認怪物出現並會巡邏。",
+      "由教師或助教人工複驗單次扣血、安全重生與1秒保護。"
+    ],
+    "test": [
+      "遊戲開始時顯示3點生命。",
+      "地圖中可看見兩隻原創怪物。",
+      "兩隻怪物會在指定範圍來回巡邏。",
+      "玩家仍可左右移動、跳躍與收集晶片。",
+      "待人工複驗：玩家碰到怪物時只扣1點生命。",
+      "待人工複驗：扣血後玩家回到安全起點。",
+      "待人工複驗：保護時間內不會連續扣血。",
+      "待人工複驗：生命歸零後遊戲結束並可重新開始。"
+    ],
+    "checklist": [
+      "我有把生命設為3。",
+      "我有建立兩隻 Enemy 怪物。",
+      "怪物會在固定範圍巡邏。",
+      "我有建立 Player 與 Enemy 的重疊事件。",
+      "碰撞事件中會扣除1點生命。",
+      "碰撞後玩家會回到安全起點。",
+      "玩家有1秒的短暫保護。",
+      "原有移動、跳躍與晶片功能仍保留。",
+      "我已完成模擬器基本測試。",
+      "我知道碰撞扣血仍需人工逐項複驗。"
+    ],
+    "commonErrors": [
+      "怪物類別設成 Player，導致重疊事件無法正確分辨角色。",
+      "怪物沒有速度，所以停在原地。",
+      "巡邏邊界寫反，怪物會卡住或一直跑出畫面。",
+      "重疊事件的角色順序錯誤，碰撞後沒有扣血。",
+      "一次碰撞連續扣掉多點生命，表示沒有加入短暫保護。",
+      "重生位置在牆壁裡，玩家會被卡住。",
+      "只打開 GhostThroughSprites 卻忘記關閉，之後玩家可能穿過怪物。",
+      "測試扣血時持續按住方向鍵，可能造成連續碰撞而誤判結果。"
+    ],
+    "rescue": [
+      "先確認怪物的類別是 Enemy，玩家的類別是 Player。",
+      "先只測試一隻怪物，確認巡邏正常後再加入第二隻。",
+      "把重生位置固定回玩家原本的安全起點。",
+      "碰撞後先開啟 GhostThroughSprites，等待1000毫秒後再關閉。",
+      "人工測試時每次只短按一次方向鍵，觀察生命是否只減少1。"
+    ],
+    "starterProject": "missing",
+    "completeProject": "missing",
+    "hardwareReminder": "本任務尚未完成實體 Arcade 遊戲機操作測試。匯出後需逐項確認方向鍵、跳躍、晶片、怪物碰撞、扣血、重生與重新開始。",
+    "downloadMode": "project",
+    "downloadNote": "目前提供可複製的 MakeCode Arcade TypeScript；真正可重新匯入的 M06 .hex 尚未匯出，因此下載按鈕保持停用。",
+    "phaseStatus": {
+      "generated": true,
+      "blocksTested": true,
+      "simulatorTested": true,
+      "hardwareTested": false,
+      "approved": false,
+      "passed": [
+        "獨立 M06 專案已建立",
+        "TypeScript 可轉回積木且問題數為0",
+        "生命初始值顯示為3",
+        "兩隻怪物正常顯示",
+        "怪物巡邏移動已確認",
+        "原有地圖、移動、跳躍與晶片程式可編譯執行"
+      ],
+      "pending": [
+        "單次碰撞只扣1點生命",
+        "安全重生位置",
+        "1秒短暫保護",
+        "生命歸零與重新開始",
+        "M06 .hex 匯出",
+        "重新匯入驗證",
+        "N3實體硬體驗證"
+      ]
+    },
+    "mediaAssets": [
+      {
+        "title": "任務6完成畫面",
+        "type": "game-preview",
+        "path": "assets/screenshots/mission-6-game-preview.png",
+        "alt": "遊戲畫面顯示玩家、晶片、三點生命與兩隻巡邏怪物。",
+        "status": "captured"
+      },
+      {
+        "title": "設定生命值",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-6-set-life.png",
+        "alt": "在遊戲開始時把生命設為3。",
+        "status": "captured"
+      },
+      {
+        "title": "建立巡邏怪物",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-6-create-enemies.png",
+        "alt": "建立兩隻 Enemy 怪物，放到地圖上並設定水平速度。",
+        "status": "captured"
+      },
+      {
+        "title": "怪物巡邏邏輯",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-6-patrol-blocks.png",
+        "alt": "定時檢查怪物位置，抵達邊界時改變水平速度。",
+        "status": "captured"
+      },
+      {
+        "title": "碰撞扣除生命",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-6-overlap-damage.png",
+        "alt": "玩家與怪物重疊時生命減少1並震動畫面。",
+        "status": "captured"
+      },
+      {
+        "title": "安全重生與短暫保護",
+        "type": "step-blocks",
+        "path": "assets/screenshots/mission-6-safe-respawn.png",
+        "alt": "碰撞後暫時開啟幽靈標記、回到安全起點，1秒後關閉保護。",
+        "status": "captured"
+      },
+      {
+        "title": "任務6完整積木",
+        "type": "main-blocks",
+        "path": "assets/screenshots/mission-6-main-blocks.png",
+        "alt": "任務6完成後的完整積木配置。",
+        "status": "captured"
+      },
+      {
+        "title": "怪物巡邏測試",
+        "type": "game-preview",
+        "path": "assets/screenshots/mission-6-patrol-test.png",
+        "alt": "模擬器中兩隻怪物已移動到不同位置，確認巡邏功能執行。",
+        "status": "captured"
+      }
+    ],
+    "customSections": [
+      {
+        "title": "建立怪物與巡邏",
+        "body": "怪物使用 Enemy 類別，這樣遊戲才能分辨玩家與怪物。兩隻怪物各自在一小段地面來回移動，抵達邊界時改變速度方向。",
+        "steps": [
+          "建立原創怪物圖案。",
+          "建立兩個 Enemy 角色。",
+          "設定怪物起點與水平速度。",
+          "使用定時更新檢查巡邏邊界。"
+        ]
+      },
+      {
+        "title": "碰撞扣血",
+        "body": "玩家與怪物重疊時，生命減少1並震動畫面。重疊事件的兩個角色類別必須正確，否則事件不會執行。",
+        "steps": [
+          "建立 Player 與 Enemy 的重疊事件。",
+          "把生命改變設為-1。",
+          "加入短暫鏡頭震動作為受傷提示。"
+        ]
+      },
+      {
+        "title": "安全重生與1秒保護",
+        "body": "只把玩家放回起點還不夠，持續按住方向鍵可能立刻再次撞到怪物。先暫時忽略角色碰撞，等待1秒後再恢復，可以避免一口氣失去全部生命。",
+        "steps": [
+          "開啟 GhostThroughSprites。",
+          "把垂直速度歸零並放回安全起點。",
+          "等待1000毫秒。",
+          "關閉 GhostThroughSprites。"
+        ]
+      }
+    ],
+    "questions": [
+      {
+        "question": "怪物應該使用哪一種角色類別？",
+        "answer": "使用 Enemy，才能和 Player 分開處理。"
+      },
+      {
+        "question": "為什麼碰撞後要有短暫保護？",
+        "answer": "避免玩家還和怪物重疊時連續扣掉很多生命。"
+      },
+      {
+        "question": "怪物到巡邏邊界後要改變什麼？",
+        "answer": "改變水平速度的正負方向。"
+      }
+    ]
   }
 ]

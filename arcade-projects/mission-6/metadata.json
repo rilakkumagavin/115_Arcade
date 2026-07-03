@@ -1,0 +1,32 @@
+{
+  "projectName": "M06_怪物與生命",
+  "lessonId": 6,
+  "source": "arcade-projects/mission-6/main.ts",
+  "exportFile": "",
+  "generated": true,
+  "blocksTested": true,
+  "simulatorTested": true,
+  "manualControlTested": false,
+  "importTested": false,
+  "hardwareTested": false,
+  "approved": false,
+  "hardwareModel": "N3",
+  "lastVerifiedAt": "2026-07-03",
+  "passed": [
+    "MakeCode Arcade專案建立",
+    "積木模式轉換問題數為0",
+    "生命初始值為3",
+    "兩隻怪物正常顯示",
+    "怪物巡邏移動"
+  ],
+  "pending": [
+    "單次碰撞扣1點生命",
+    "安全重生",
+    "1秒短暫保護",
+    "生命歸零與重新開始",
+    "HEX匯出",
+    "重新匯入",
+    "N3實體硬體測試"
+  ],
+  "notes": "自動化長按方向鍵會造成持續輸入，無法把單次扣血結果視為可靠證據，碰撞相關功能保留待人工複驗。"
+}

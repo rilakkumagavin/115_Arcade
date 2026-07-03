@@ -52,7 +52,7 @@ function renderChrome() {
     footer.innerHTML = `
       <div class="footer-inner">
         <span>《晶片勇者：校園冒險》MakeCode Arcade 營隊教材網站</span>
-        <span>任務0至任務4教材已整合；下載與測試狀態依實際進度標示。</span>
+        <span>任務0至任務6教材已整合；下載與測試狀態依實際進度標示。</span>
       </div>
     `;
   }
