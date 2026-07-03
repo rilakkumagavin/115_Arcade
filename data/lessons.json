@@ -1244,10 +1244,10 @@
       "確認程式中有攝影機跟隨玩家。"
     ],
     "starterProject": "missing",
-    "completeProject": "missing",
+    "completeProject": "generated",
     "hardwareReminder": "尚未進行N3實體硬體測試，需確認攝影機捲動、終點、音效與勝利畫面。",
     "downloadMode": "project",
-    "downloadNote": "目前提供TypeScript；真正的M07 .hex尚未匯出，下載按鈕保持停用。",
+    "downloadNote": "M07 .hex已接入下載中心；尚未重新匯入與完成N3硬體驗證。",
     "phaseStatus": {
       "generated": true,
       "blocksTested": true,
@@ -1265,7 +1265,6 @@
         "抵達終點完整操作測試",
         "勝利音效與畫面測試",
         "完成效果圖擷取",
-        "M07 .hex匯出",
         "重新匯入與N3硬體測試"
       ]
     },

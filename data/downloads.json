@@ -118,12 +118,12 @@
   },
   {
     "fileName": "arcade-M07_終點與過關.hex",
-    "path": "",
+    "path": "downloads/projects/mission-7-complete/arcade-M07_終點與過關.hex",
     "type": "MakeCode HEX",
     "purpose": "任務7完成版MakeCode Arcade匯出檔。",
-    "status": "missing",
-    "available": false,
-    "productionMethod": "需由MakeCode Arcade使用Download as File匯出真正的.hex。"
+    "status": "generated",
+    "available": true,
+    "productionMethod": "已接入MakeCode Arcade使用Download as File匯出的真實.hex；待重新匯入與硬體驗證。"
   },
   {
     "fileName": "mission-8/main.ts",

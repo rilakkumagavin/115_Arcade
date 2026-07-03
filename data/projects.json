@@ -304,10 +304,10 @@
     "lessonId": 7,
     "description": "M07_終點與過關的MakeCode Arcade .hex匯出檔。",
     "fileType": "MakeCode HEX",
-    "filePath": "",
-    "fileSize": 0,
+    "filePath": "downloads/projects/mission-7-complete/arcade-M07_終點與過關.hex",
+    "fileSize": 858388,
     "sha256": "",
-    "status": "missing",
+    "status": "generated",
     "importTested": false,
     "blocksTested": true,
     "simulatorTested": true,
@@ -316,8 +316,8 @@
     "approved": false,
     "hardwareModel": "N3",
     "lastVerifiedAt": "2026-07-03",
-    "notes": "尚未匯出真正的M07 .hex。",
-    "exists": false
+    "notes": "已接入MakeCode Arcade實際匯出的M07 .hex；尚未執行重新匯入與硬體驗證。",
+    "exists": true
   },
   {
     "title": "任務8個人化範例TypeScript",
